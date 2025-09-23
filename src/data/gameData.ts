@@ -6,42 +6,40 @@ export interface Question {
   gif: string;
 }
 
-// EASILY CONFIGURABLE: Add or remove questions here
-// Number of questions automatically determines number of checkpoints
 export const gameQuestions: Question[] = [
   {
     id: 1,
-    question: "What year was Pepsi-Cola first invented?",
-    options: ["1886", "1893", "1898", "1903"],
-    correctAnswer: 2, // 1898
+    question: "What year was Sting Energy Drink first launched?",
+    options: ["2002", "2004", "2006", "2008"],
+    correctAnswer: 0, // 2002
     gif: "https://media.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif"
   },
   {
     id: 2,
-    question: "Which famous singer starred in Pepsi's 'Generation Next' campaign?",
-    options: ["Madonna", "Michael Jackson", "Britney Spears", "Beyoncé"],
-    correctAnswer: 1, // Michael Jackson
+    question: "What is the main ingredient that gives Sting its energy boost?",
+    options: ["Taurine", "Caffeine", "Ginseng", "All of the above"],
+    correctAnswer: 3, // All of the above
     gif: "https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif"
   },
   {
     id: 3,
-    question: "What is Pepsi's main competitor brand?",
-    options: ["Sprite", "Coca-Cola", "Dr Pepper", "Mountain Dew"],
-    correctAnswer: 1, // Coca-Cola
+    question: "Which company owns the Sting Energy brand?",
+    options: ["Red Bull", "PepsiCo", "Coca-Cola", "Monster"],
+    correctAnswer: 1, // PepsiCo
     gif: "https://media.giphy.com/media/26AHPxxnSw1L9T1rW/giphy.gif"
   },
   {
     id: 4,
-    question: "In which decade did Pepsi launch the 'Pepsi Challenge'?",
-    options: ["1960s", "1970s", "1980s", "1990s"],
-    correctAnswer: 1, // 1970s
+    question: "What is Sting's signature flavor profile?",
+    options: ["Tropical", "Berry", "Gold Rush", "Citrus"],
+    correctAnswer: 2, // Gold Rush
     gif: "https://media.giphy.com/media/3o7TKqnN349PBUtGFO/giphy.gif"
   },
   {
     id: 5,
-    question: "What does the Pepsi logo symbolize?",
-    options: ["Earth and Sky", "Yin and Yang", "Day and Night", "Past and Future"],
-    correctAnswer: 0, // Earth and Sky
+    question: "In how many countries is Sting Energy available?",
+    options: ["Over 50", "Over 100", "Over 150", "Over 200"],
+    correctAnswer: 2, // Over 150
     gif: "https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif"
   }
 ];
@@ -53,12 +51,12 @@ export const getRevenueMessage = (score: number, total: number): string => {
   const percentage = (score / total) * 100;
   
   if (percentage === 100) {
-    return "🎉 PERFECT SCORE! Maximum revenue achieved!";
+    return "⚡ PERFECT ENERGY! Maximum revenue achieved!";
   } else if (percentage >= 75) {
-    return "🌟 Excellent performance! Strong revenue growth!";
+    return "🔥 High Energy! Strong revenue growth!";
   } else if (percentage >= 50) {
-    return "👍 Good job! Decent revenue generated!";
+    return "⚡ Good Energy! Decent revenue generated!";
   } else {
-    return "📈 Room for improvement! Let's boost that revenue!";
+    return "🔋 Low Energy! Need more power to boost revenue!";
   }
 };

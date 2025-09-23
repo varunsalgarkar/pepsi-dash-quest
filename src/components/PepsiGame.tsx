@@ -7,7 +7,7 @@ import { gameQuestions } from "@/data/gameData";
 
 type GameState = "start" | "playing" | "results";
 
-export const PepsiGame = () => {
+export const StingGame = () => {
   const [gameState, setGameState] = useState<GameState>("start");
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -59,7 +59,7 @@ export const PepsiGame = () => {
   }
 
   return (
-    <div className="min-h-screen" style={{background: "var(--gradient-game)"}}>
+    <div className="min-h-screen sting-bg">
       {/* Truck Path Component */}
       <div className="p-2 sm:p-4">
         <TruckPath

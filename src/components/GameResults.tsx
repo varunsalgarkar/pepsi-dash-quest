@@ -29,7 +29,8 @@ export const GameResults = ({ score, totalQuestions, onRestart }: GameResultsPro
   }, []);
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4" style={{background: "var(--gradient-game)"}}>
+    <div className="min-h-screen flex items-center justify-center p-4 sting-bg">
+      <div className="energy-particles"></div>
       {/* Confetti Effect */}
       {showConfetti && (
         <div className="fixed inset-0 pointer-events-none z-10">
@@ -40,17 +41,18 @@ export const GameResults = ({ score, totalQuestions, onRestart }: GameResultsPro
               style={{
                 left: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 3}s`,
-                backgroundColor: i % 2 === 0 ? 'hsl(var(--pepsi-blue))' : 'hsl(var(--pepsi-red))'
+                backgroundColor: i % 2 === 0 ? 'hsl(var(--sting-gold))' : 'hsl(var(--electric-cyan))'
               }}
             />
           ))}
         </div>
       )}
 
-      <Card className="max-w-2xl w-full p-8 text-center bounce-entrance">
+      <div className="electric-border max-w-2xl w-full bounce-entrance">
+        <div className="electric-border-inner p-8 text-center energy-pulse">
         <div className="mb-6">
           <div className="text-6xl mb-4">{performance.icon}</div>
-          <h1 className="text-4xl font-bold pepsi-gradient bg-clip-text text-transparent mb-2">
+          <h1 className="text-4xl font-bold sting-gradient bg-clip-text text-transparent mb-2">
             MISSION COMPLETE!
           </h1>
           <p className={`text-xl font-bold ${performance.color}`}>
@@ -59,7 +61,7 @@ export const GameResults = ({ score, totalQuestions, onRestart }: GameResultsPro
         </div>
 
         {/* Revenue Display */}
-        <div className="mb-8 p-6 rounded-2xl pepsi-gradient text-pepsi-white">
+        <div className="mb-8 p-6 rounded-2xl sting-gradient text-sting-black glass-card">
           <TrendingUp className="w-12 h-12 mx-auto mb-4" />
           <div className="text-3xl font-bold mb-2">
             ${score}M Revenue Generated
@@ -67,9 +69,9 @@ export const GameResults = ({ score, totalQuestions, onRestart }: GameResultsPro
           <div className="text-lg opacity-90">
             Out of ${totalQuestions}M possible
           </div>
-          <div className="mt-4 w-full bg-pepsi-white/20 rounded-full h-3">
+          <div className="mt-4 w-full bg-sting-black/20 rounded-full h-3">
             <div 
-              className="bg-pepsi-white h-3 rounded-full transition-all duration-2000"
+              className="bg-sting-black h-3 rounded-full transition-all duration-2000"
               style={{ width: `${percentage}%` }}
             />
           </div>
@@ -80,21 +82,21 @@ export const GameResults = ({ score, totalQuestions, onRestart }: GameResultsPro
 
         {/* Performance Breakdown */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-          <div className="p-4 rounded-xl bg-correct/10 border border-correct/20">
+          <div className="glass-card p-4">
             <Star className="w-6 h-6 text-correct mx-auto mb-2" />
             <div className="text-2xl font-bold text-correct">{score}</div>
             <div className="text-sm text-foreground/70">Correct Answers</div>
           </div>
           
-          <div className="p-4 rounded-xl bg-incorrect/10 border border-incorrect/20">
+          <div className="glass-card p-4">
             <Trophy className="w-6 h-6 text-incorrect mx-auto mb-2" />
             <div className="text-2xl font-bold text-incorrect">{totalQuestions - score}</div>
             <div className="text-sm text-foreground/70">Missed Opportunities</div>
           </div>
           
-          <div className="p-4 rounded-xl bg-pepsi-blue/10 border border-pepsi-blue/20">
-            <TrendingUp className="w-6 h-6 text-pepsi-blue mx-auto mb-2" />
-            <div className="text-2xl font-bold text-pepsi-blue">{percentage.toFixed(0)}%</div>
+          <div className="glass-card p-4">
+            <TrendingUp className="w-6 h-6 text-sting-gold mx-auto mb-2" />
+            <div className="text-2xl font-bold text-sting-gold">{percentage.toFixed(0)}%</div>
             <div className="text-sm text-foreground/70">Success Rate</div>
           </div>
         </div>
@@ -104,7 +106,7 @@ export const GameResults = ({ score, totalQuestions, onRestart }: GameResultsPro
           <Button
             onClick={onRestart}
             size="lg"
-            className="pepsi-gradient text-pepsi-white hover:shadow-[var(--glow-pepsi)] transition-[var(--transition-bounce)] flex-1"
+            className="sting-gradient text-sting-black hover:shadow-[var(--glow-sting)] transition-[var(--transition-bounce)] flex-1 glass-button"
           >
             <RotateCcw className="w-5 h-5 mr-2" />
             Play Again
@@ -113,20 +115,21 @@ export const GameResults = ({ score, totalQuestions, onRestart }: GameResultsPro
           <Button
             variant="outline"
             size="lg"
-            className="border-pepsi-blue text-pepsi-blue hover:bg-pepsi-blue/10 flex-1"
+            className="glass-button border-sting-gold text-sting-gold hover:bg-sting-gold/10 flex-1"
             onClick={() => window.location.reload()}
           >
             🏠 Home
           </Button>
         </div>
 
-        <div className="mt-6 text-sm text-foreground/60">
-          <p>🚛 Great job navigating the revenue journey!</p>
+        <div className="mt-6 text-sm text-sting-white/60">
+          <p>⚡ Great job powering through the energy challenge!</p>
           {percentage < 100 && (
-            <p className="mt-1 text-pepsi-blue">Try again to maximize your Pepsi revenue! 💪</p>
+            <p className="mt-1 text-sting-gold">Try again to maximize your Sting revenue! 💪</p>
           )}
         </div>
-      </Card>
+        </div>
+      </div>
     </div>
   );
 };

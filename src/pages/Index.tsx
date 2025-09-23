@@ -1,7 +1,7 @@
-import { PepsiGame } from "@/components/PepsiGame";
+import { StingGame } from "@/components/PepsiGame";
 
 const Index = () => {
-  return <PepsiGame />;
+  return <StingGame />;
 };
 
 export default Index;

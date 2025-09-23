@@ -61,16 +61,16 @@ export const TruckPath = ({ currentCheckpoint, totalCheckpoints, isMoving }: Tru
   }).join(' ');
 
   return (
-    <div className="relative w-full h-32 sm:h-36 md:h-40 bg-gradient-to-b from-pepsi-silver/30 to-pepsi-silver/10 rounded-xl overflow-hidden">
+    <div className="relative w-full h-32 sm:h-36 md:h-40 glass-card overflow-hidden">
       {/* Path line */}
       <svg className="absolute inset-0 w-full h-full">
         <polyline
           points={pathPoints}
           fill="none"
-          stroke="hsl(var(--neutral))"
+          stroke="hsl(var(--sting-gold))"
           strokeWidth="2"
           strokeDasharray="4,4"
-          className="opacity-50 sm:stroke-[3]"
+          className="opacity-70 sm:stroke-[3]"
         />
       </svg>
 
@@ -95,14 +95,14 @@ export const TruckPath = ({ currentCheckpoint, totalCheckpoints, isMoving }: Tru
 
       {/* Revenue meter backdrop */}
       <div className="absolute bottom-1 sm:bottom-2 left-2 sm:left-4 right-2 sm:right-4">
-        <div className="text-xs font-medium text-foreground/70 mb-1 hidden sm:block">Pepsi Revenue Progress</div>
-        <div className="w-full bg-neutral/30 rounded-full h-1.5 sm:h-2">
+        <div className="text-xs font-medium text-sting-white/70 mb-1 hidden sm:block">Sting Revenue Progress</div>
+        <div className="w-full bg-sting-black/30 rounded-full h-1.5 sm:h-2">
           <div 
-            className="revenue-gradient h-1.5 sm:h-2 rounded-full transition-all duration-1000"
+            className="sting-gradient h-1.5 sm:h-2 rounded-full transition-all duration-1000"
             style={{ width: `${(currentCheckpoint / totalCheckpoints) * 100}%` }}
           />
         </div>
-        <div className="text-xs text-pepsi-blue font-medium mt-1">
+        <div className="text-xs text-sting-gold font-medium mt-1">
           ${currentCheckpoint}M / ${totalCheckpoints}M Target
         </div>
       </div>

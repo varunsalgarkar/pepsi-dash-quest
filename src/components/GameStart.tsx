@@ -7,51 +7,54 @@ interface GameStartProps {
 
 export const GameStart = ({ onStart }: GameStartProps) => {
   return (
-    <div className="min-h-screen flex items-center justify-center p-4" style={{background: "var(--gradient-game)"}}>
-      <div className="game-card max-w-2xl w-full text-center bounce-entrance">
+    <div className="min-h-screen flex items-center justify-center p-4 sting-bg">
+      <div className="energy-particles"></div>
+      <div className="electric-border max-w-2xl w-full bounce-entrance">
+        <div className="electric-border-inner p-8 text-center energy-pulse">
         <div className="mb-8">
-          <h1 className="text-6xl font-bold mb-4 pepsi-gradient bg-clip-text text-transparent">
-            PEPSI QUIZ
+          <h1 className="text-6xl font-bold mb-4 sting-gradient bg-clip-text text-transparent">
+            STING ENERGY QUIZ
           </h1>
-          <p className="text-xl text-foreground/80 mb-2">
-            Test your knowledge and maximize revenue!
+          <p className="text-xl text-sting-gold mb-2">
+            Test your energy knowledge and maximize revenue!
           </p>
-          <div className="flex items-center justify-center gap-2 text-pepsi-blue">
+          <div className="flex items-center justify-center gap-2 text-electric-cyan">
             <Target className="w-5 h-5" />
             <span className="text-sm font-medium">Every correct answer = +$1M Revenue</span>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-          <div className="p-4 rounded-xl bg-pepsi-blue/10 border-2 border-pepsi-blue/20">
-            <Trophy className="w-8 h-8 text-pepsi-blue mx-auto mb-2" />
-            <h3 className="font-semibold text-pepsi-blue">Challenge</h3>
-            <p className="text-sm text-foreground/70">Answer quiz questions correctly</p>
+          <div className="glass-card p-4">
+            <Trophy className="w-8 h-8 text-sting-gold mx-auto mb-2" />
+            <h3 className="font-semibold text-sting-gold">Challenge</h3>
+            <p className="text-sm text-sting-white/70">Answer energy quiz questions correctly</p>
           </div>
           
-          <div className="p-4 rounded-xl bg-pepsi-red/10 border-2 border-pepsi-red/20">
-            <Zap className="w-8 h-8 text-pepsi-red mx-auto mb-2" />
-            <h3 className="font-semibold text-pepsi-red">Rewards</h3>
-            <p className="text-sm text-foreground/70">Build your revenue meter</p>
+          <div className="glass-card p-4">
+            <Zap className="w-8 h-8 text-electric-cyan mx-auto mb-2" />
+            <h3 className="font-semibold text-electric-cyan">Energy Boost</h3>
+            <p className="text-sm text-sting-white/70">Build your revenue meter</p>
           </div>
           
-          <div className="p-4 rounded-xl bg-correct/10 border-2 border-correct/20">
+          <div className="glass-card p-4">
             <Target className="w-8 h-8 text-correct mx-auto mb-2" />
             <h3 className="font-semibold text-correct">Goal</h3>
-            <p className="text-sm text-foreground/70">Maximize Pepsi revenue</p>
+            <p className="text-sm text-sting-white/70">Maximize Sting revenue</p>
           </div>
         </div>
 
         <Button
           onClick={onStart}
           size="lg"
-          className="pepsi-gradient text-pepsi-white hover:shadow-[var(--glow-pepsi)] transition-[var(--transition-bounce)] text-lg px-8 py-6 rounded-xl font-bold"
+          className="sting-gradient text-sting-black hover:shadow-[var(--glow-sting)] transition-[var(--transition-bounce)] text-lg px-8 py-6 rounded-xl font-bold glass-button"
         >
-          🚛 START JOURNEY
+          ⚡ START ENERGY QUEST
         </Button>
         
-        <div className="mt-6 text-sm text-foreground/60">
-          <p>🎯 4 questions • 🚛 Animated truck journey • 💰 Revenue tracking</p>
+        <div className="mt-6 text-sm text-sting-white/60">
+          <p>⚡ 5 questions • 🚛 Animated journey • 💰 Revenue tracking</p>
+        </div>
         </div>
       </div>
     </div>
