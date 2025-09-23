@@ -25,7 +25,8 @@ export const PepsiGame = () => {
       setScore(score + 1);
       setTruckPosition(truckPosition + 1);
     }
-
+    // Always move to next question regardless of answer (Enhancement 1)
+    
     // Move to next question or end game
     if (currentQuestionIndex + 1 < gameQuestions.length) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
@@ -60,7 +61,7 @@ export const PepsiGame = () => {
   return (
     <div className="min-h-screen" style={{background: "var(--gradient-game)"}}>
       {/* Truck Path Component */}
-      <div className="p-4">
+      <div className="p-2 sm:p-4">
         <TruckPath
           currentCheckpoint={truckPosition}
           totalCheckpoints={gameQuestions.length}

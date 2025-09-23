@@ -32,7 +32,7 @@ export const TruckPath = ({ currentCheckpoint, totalCheckpoints, isMoving }: Tru
     return (
       <div
         key={i}
-        className={`absolute w-4 h-4 rounded-full border-2 transition-all duration-500 ${
+        className={`absolute w-3 h-3 sm:w-4 sm:h-4 rounded-full border-2 transition-all duration-500 ${
           isReached 
             ? 'bg-correct border-correct shadow-lg' 
             : isCurrent
@@ -45,7 +45,7 @@ export const TruckPath = ({ currentCheckpoint, totalCheckpoints, isMoving }: Tru
           transform: 'translate(-50%, -50%)'
         }}
       >
-        <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs font-medium text-foreground/70 whitespace-nowrap">
+        <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 text-xs font-medium text-foreground/70 whitespace-nowrap">
           Q{i + 1}
         </div>
       </div>
@@ -61,16 +61,16 @@ export const TruckPath = ({ currentCheckpoint, totalCheckpoints, isMoving }: Tru
   }).join(' ');
 
   return (
-    <div className="relative w-full h-40 bg-gradient-to-b from-pepsi-silver/30 to-pepsi-silver/10 rounded-xl overflow-hidden">
+    <div className="relative w-full h-32 sm:h-36 md:h-40 bg-gradient-to-b from-pepsi-silver/30 to-pepsi-silver/10 rounded-xl overflow-hidden">
       {/* Path line */}
       <svg className="absolute inset-0 w-full h-full">
         <polyline
           points={pathPoints}
           fill="none"
           stroke="hsl(var(--neutral))"
-          strokeWidth="3"
-          strokeDasharray="5,5"
-          className="opacity-50"
+          strokeWidth="2"
+          strokeDasharray="4,4"
+          className="opacity-50 sm:stroke-[3]"
         />
       </svg>
 
@@ -79,7 +79,7 @@ export const TruckPath = ({ currentCheckpoint, totalCheckpoints, isMoving }: Tru
 
       {/* Truck */}
       <div
-        className={`absolute text-2xl transition-all duration-1000 ${
+        className={`absolute text-lg sm:text-xl md:text-2xl transition-all duration-1000 ${
           isMoving ? 'truck-animate' : ''
         }`}
         style={{
@@ -94,11 +94,11 @@ export const TruckPath = ({ currentCheckpoint, totalCheckpoints, isMoving }: Tru
       </div>
 
       {/* Revenue meter backdrop */}
-      <div className="absolute bottom-2 left-4 right-4">
-        <div className="text-xs font-medium text-foreground/70 mb-1">Pepsi Revenue Progress</div>
-        <div className="w-full bg-neutral/30 rounded-full h-2">
+      <div className="absolute bottom-1 sm:bottom-2 left-2 sm:left-4 right-2 sm:right-4">
+        <div className="text-xs font-medium text-foreground/70 mb-1 hidden sm:block">Pepsi Revenue Progress</div>
+        <div className="w-full bg-neutral/30 rounded-full h-1.5 sm:h-2">
           <div 
-            className="revenue-gradient h-2 rounded-full transition-all duration-1000"
+            className="revenue-gradient h-1.5 sm:h-2 rounded-full transition-all duration-1000"
             style={{ width: `${(currentCheckpoint / totalCheckpoints) * 100}%` }}
           />
         </div>

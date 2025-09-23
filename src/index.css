@@ -35,7 +35,7 @@
     --gradient-pepsi: linear-gradient(135deg, hsl(var(--pepsi-blue)), hsl(var(--pepsi-red)));
     --gradient-revenue: linear-gradient(90deg, hsl(var(--revenue-low)), hsl(var(--revenue-high)));
     --gradient-success: linear-gradient(135deg, hsl(var(--correct)), hsl(120 80% 40%));
-    --gradient-game: linear-gradient(180deg, hsl(var(--pepsi-white)), hsl(var(--pepsi-silver)));
+    --gradient-game: linear-gradient(135deg, #0065c3, #004a94);
     
     /* Shadows & Effects */
     --shadow-pepsi: 0 10px 30px -5px hsl(var(--pepsi-blue) / 0.3);

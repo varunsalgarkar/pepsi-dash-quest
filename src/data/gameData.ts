@@ -6,6 +6,8 @@ export interface Question {
   gif: string;
 }
 
+// EASILY CONFIGURABLE: Add or remove questions here
+// Number of questions automatically determines number of checkpoints
 export const gameQuestions: Question[] = [
   {
     id: 1,
@@ -34,8 +36,18 @@ export const gameQuestions: Question[] = [
     options: ["1960s", "1970s", "1980s", "1990s"],
     correctAnswer: 1, // 1970s
     gif: "https://media.giphy.com/media/3o7TKqnN349PBUtGFO/giphy.gif"
+  },
+  {
+    id: 5,
+    question: "What does the Pepsi logo symbolize?",
+    options: ["Earth and Sky", "Yin and Yang", "Day and Night", "Past and Future"],
+    correctAnswer: 0, // Earth and Sky
+    gif: "https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif"
   }
 ];
+
+// Helper function to get total number of questions/checkpoints
+export const getTotalQuestions = (): number => gameQuestions.length;
 
 export const getRevenueMessage = (score: number, total: number): string => {
   const percentage = (score / total) * 100;
