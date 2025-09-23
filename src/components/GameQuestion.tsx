@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { CheckCircle, XCircle, Clock } from "lucide-react";
+import { CheckCircle, XCircle, Clock, RotateCcw } from "lucide-react";
 
 interface Question {
   id: number;
@@ -14,11 +14,12 @@ interface Question {
 interface GameQuestionProps {
   question: Question;
   onAnswer: (correct: boolean) => void;
+  onRestart: () => void;
   currentScore: number;
   totalQuestions: number;
 }
 
-export const GameQuestion = ({ question, onAnswer, currentScore, totalQuestions }: GameQuestionProps) => {
+export const GameQuestion = ({ question, onAnswer, onRestart, currentScore, totalQuestions }: GameQuestionProps) => {
   const [showGif, setShowGif] = useState(true);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [answered, setAnswered] = useState(false);
@@ -81,14 +82,25 @@ export const GameQuestion = ({ question, onAnswer, currentScore, totalQuestions 
     <div className="min-h-screen flex items-center justify-center p-4" style={{background: "var(--gradient-game)"}}>
       <div className="max-w-4xl w-full">
         {/* Progress Header */}
-        <div className="mb-6 text-center">
+        <div className="mb-6">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm font-medium text-foreground/70">
               Question {question.id} of {totalQuestions}
             </span>
-            <span className="text-sm font-medium text-pepsi-blue">
-              Revenue: ${currentScore}M
-            </span>
+            <div className="flex items-center gap-4">
+              <span className="text-sm font-medium text-pepsi-blue">
+                Revenue: ${currentScore}M
+              </span>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={onRestart}
+                className="border-pepsi-red text-pepsi-red hover:bg-pepsi-red/10 px-3 py-1 h-auto text-xs"
+              >
+                <RotateCcw className="w-3 h-3 mr-1" />
+                Restart
+              </Button>
+            </div>
           </div>
           <div className="w-full bg-neutral/30 rounded-full h-2">
             <div 

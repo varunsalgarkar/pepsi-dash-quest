@@ -72,6 +72,7 @@ export const PepsiGame = () => {
       <GameQuestion
         question={gameQuestions[currentQuestionIndex]}
         onAnswer={handleAnswer}
+        onRestart={handleRestart}
         currentScore={score}
         totalQuestions={gameQuestions.length}
       />
