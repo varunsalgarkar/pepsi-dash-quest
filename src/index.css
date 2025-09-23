@@ -2,41 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Pepsi Game Design System - All colors, gradients, fonts, animations */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Pepsi Brand Colors */
+    --pepsi-blue: 210 100% 42%;
+    --pepsi-blue-dark: 210 100% 35%;
+    --pepsi-red: 0 82% 55%;
+    --pepsi-red-dark: 0 82% 45%;
+    --pepsi-white: 0 0% 100%;
+    --pepsi-silver: 220 9% 93%;
+    
+    /* Game UI Colors */
+    --background: 220 25% 95%;
+    --foreground: 220 10% 15%;
+    --game-surface: 0 0% 100%;
+    --game-surface-dark: 220 15% 98%;
+    
+    /* Revenue Colors */
+    --revenue-low: 45 100% 60%;
+    --revenue-medium: 35 100% 55%;
+    --revenue-high: 120 60% 50%;
+    --revenue-max: 150 100% 40%;
+    
+    /* Interactive States */
+    --correct: 120 60% 45%;
+    --incorrect: 0 70% 55%;
+    --neutral: 220 15% 70%;
+    
+    /* Gradients */
+    --gradient-pepsi: linear-gradient(135deg, hsl(var(--pepsi-blue)), hsl(var(--pepsi-red)));
+    --gradient-revenue: linear-gradient(90deg, hsl(var(--revenue-low)), hsl(var(--revenue-high)));
+    --gradient-success: linear-gradient(135deg, hsl(var(--correct)), hsl(120 80% 40%));
+    --gradient-game: linear-gradient(180deg, hsl(var(--pepsi-white)), hsl(var(--pepsi-silver)));
+    
+    /* Shadows & Effects */
+    --shadow-pepsi: 0 10px 30px -5px hsl(var(--pepsi-blue) / 0.3);
+    --shadow-game: 0 8px 25px -8px hsl(220 10% 15% / 0.15);
+    --shadow-card: 0 4px 15px -3px hsl(220 10% 15% / 0.1);
+    --glow-pepsi: 0 0 30px hsl(var(--pepsi-blue) / 0.4);
+    
+    /* Animations & Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --animation-duration: 0.5s;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -91,6 +103,69 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+/* Game Animations & Keyframes */
+@keyframes truck-move {
+  0% { transform: translateX(0) translateY(0) rotate(0deg); }
+  100% { transform: translateX(var(--truck-x)) translateY(var(--truck-y)) rotate(5deg); }
+}
+
+@keyframes revenue-fill {
+  0% { width: 0%; }
+  100% { width: var(--fill-width); }
+}
+
+@keyframes bounce-in {
+  0% { transform: scale(0.3) rotate(-5deg); opacity: 0; }
+  50% { transform: scale(1.05) rotate(2deg); }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: var(--shadow-pepsi); }
+  50% { box-shadow: var(--glow-pepsi); }
+}
+
+@keyframes slide-in-up {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes confetti-fall {
+  0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+@layer components {
+  /* Game Component Styles */
+  .game-card {
+    @apply bg-game-surface rounded-2xl p-6 shadow-[var(--shadow-card)] transition-[var(--transition-smooth)];
+  }
+  
+  .pepsi-gradient {
+    background: var(--gradient-pepsi);
+  }
+  
+  .revenue-gradient {
+    background: var(--gradient-revenue);
+  }
+  
+  .truck-animate {
+    animation: truck-move var(--animation-duration) cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  .bounce-entrance {
+    animation: bounce-in 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+  
+  .pulse-effect {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  
+  .slide-up {
+    animation: slide-in-up 0.5s ease-out forwards;
   }
 }
 

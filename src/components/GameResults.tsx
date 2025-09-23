@@ -1,0 +1,132 @@
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Trophy, TrendingUp, RotateCcw, Star } from "lucide-react";
+import { useEffect, useState } from "react";
+
+interface GameResultsProps {
+  score: number;
+  totalQuestions: number;
+  onRestart: () => void;
+}
+
+export const GameResults = ({ score, totalQuestions, onRestart }: GameResultsProps) => {
+  const [showConfetti, setShowConfetti] = useState(false);
+  const percentage = (score / totalQuestions) * 100;
+  
+  const getPerformanceLevel = () => {
+    if (percentage === 100) return { level: "LEGENDARY", color: "text-revenue-max", icon: "🏆" };
+    if (percentage >= 75) return { level: "EXCELLENT", color: "text-correct", icon: "🌟" };
+    if (percentage >= 50) return { level: "GOOD", color: "text-revenue-medium", icon: "👍" };
+    return { level: "NEEDS WORK", color: "text-incorrect", icon: "📈" };
+  };
+
+  const performance = getPerformanceLevel();
+
+  useEffect(() => {
+    setShowConfetti(true);
+    const timer = setTimeout(() => setShowConfetti(false), 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div className="min-h-screen flex items-center justify-center p-4" style={{background: "var(--gradient-game)"}}>
+      {/* Confetti Effect */}
+      {showConfetti && (
+        <div className="fixed inset-0 pointer-events-none z-10">
+          {Array.from({ length: 20 }).map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-2 h-2 bg-pepsi-blue rounded-full animate-[confetti-fall_3s_linear_infinite]"
+              style={{
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 3}s`,
+                backgroundColor: i % 2 === 0 ? 'hsl(var(--pepsi-blue))' : 'hsl(var(--pepsi-red))'
+              }}
+            />
+          ))}
+        </div>
+      )}
+
+      <Card className="max-w-2xl w-full p-8 text-center bounce-entrance">
+        <div className="mb-6">
+          <div className="text-6xl mb-4">{performance.icon}</div>
+          <h1 className="text-4xl font-bold pepsi-gradient bg-clip-text text-transparent mb-2">
+            MISSION COMPLETE!
+          </h1>
+          <p className={`text-xl font-bold ${performance.color}`}>
+            {performance.level}
+          </p>
+        </div>
+
+        {/* Revenue Display */}
+        <div className="mb-8 p-6 rounded-2xl pepsi-gradient text-pepsi-white">
+          <TrendingUp className="w-12 h-12 mx-auto mb-4" />
+          <div className="text-3xl font-bold mb-2">
+            ${score}M Revenue Generated
+          </div>
+          <div className="text-lg opacity-90">
+            Out of ${totalQuestions}M possible
+          </div>
+          <div className="mt-4 w-full bg-pepsi-white/20 rounded-full h-3">
+            <div 
+              className="bg-pepsi-white h-3 rounded-full transition-all duration-2000"
+              style={{ width: `${percentage}%` }}
+            />
+          </div>
+          <div className="text-sm mt-2 opacity-75">
+            {percentage.toFixed(0)}% Target Achieved
+          </div>
+        </div>
+
+        {/* Performance Breakdown */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+          <div className="p-4 rounded-xl bg-correct/10 border border-correct/20">
+            <Star className="w-6 h-6 text-correct mx-auto mb-2" />
+            <div className="text-2xl font-bold text-correct">{score}</div>
+            <div className="text-sm text-foreground/70">Correct Answers</div>
+          </div>
+          
+          <div className="p-4 rounded-xl bg-incorrect/10 border border-incorrect/20">
+            <Trophy className="w-6 h-6 text-incorrect mx-auto mb-2" />
+            <div className="text-2xl font-bold text-incorrect">{totalQuestions - score}</div>
+            <div className="text-sm text-foreground/70">Missed Opportunities</div>
+          </div>
+          
+          <div className="p-4 rounded-xl bg-pepsi-blue/10 border border-pepsi-blue/20">
+            <TrendingUp className="w-6 h-6 text-pepsi-blue mx-auto mb-2" />
+            <div className="text-2xl font-bold text-pepsi-blue">{percentage.toFixed(0)}%</div>
+            <div className="text-sm text-foreground/70">Success Rate</div>
+          </div>
+        </div>
+
+        {/* Action Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Button
+            onClick={onRestart}
+            size="lg"
+            className="pepsi-gradient text-pepsi-white hover:shadow-[var(--glow-pepsi)] transition-[var(--transition-bounce)] flex-1"
+          >
+            <RotateCcw className="w-5 h-5 mr-2" />
+            Play Again
+          </Button>
+          
+          <Button
+            variant="outline"
+            size="lg"
+            className="border-pepsi-blue text-pepsi-blue hover:bg-pepsi-blue/10 flex-1"
+            onClick={() => window.location.reload()}
+          >
+            🏠 Home
+          </Button>
+        </div>
+
+        <div className="mt-6 text-sm text-foreground/60">
+          <p>🚛 Great job navigating the revenue journey!</p>
+          {percentage < 100 && (
+            <p className="mt-1 text-pepsi-blue">Try again to maximize your Pepsi revenue! 💪</p>
+          )}
+        </div>
+      </Card>
+    </div>
+  );
+};
