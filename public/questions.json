@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "question": "What year was Sting Energy Drink first launched?",
+    "options": ["2002", "2004", "2006", "2008"],
+    "correctAnswer": 0,
+    "gif": "https://media.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif"
+  },
+  {
+    "id": 2,
+    "question": "What is the main ingredient that gives Sting its energy boost?",
+    "options": ["Taurine", "Caffeine", "Ginseng", "All of the above"],
+    "correctAnswer": 3,
+    "gif": "https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif"
+  },
+  {
+    "id": 3,
+    "question": "Which company owns the Sting Energy brand?",
+    "options": ["Red Bull", "PepsiCo", "Coca-Cola", "Monster"],
+    "correctAnswer": 1,
+    "gif": "https://media.giphy.com/media/26AHPxxnSw1L9T1rW/giphy.gif"
+  },
+  {
+    "id": 4,
+    "question": "What is Sting's signature flavor profile?",
+    "options": ["Tropical", "Berry", "Gold Rush", "Citrus"],
+    "correctAnswer": 2,
+    "gif": "https://media.giphy.com/media/3o7TKqnN349PBUtGFO/giphy.gif"
+  },
+  {
+    "id": 5,
+    "question": "In how many countries is Sting Energy available?",
+    "options": ["Over 50", "Over 100", "Over 150", "Over 200"],
+    "correctAnswer": 2,
+    "gif": "https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif"
+  },
+  {
+    "id": 6,
+    "question": "What is the caffeine content in a standard Sting Energy can?",
+    "options": ["80mg", "100mg", "120mg", "140mg"],
+    "correctAnswer": 1,
+    "gif": "https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif"
+  },
+  {
+    "id": 7,
+    "question": "Which sports event does Sting Energy commonly sponsor?",
+    "options": ["Football", "Basketball", "Cricket", "All of the above"],
+    "correctAnswer": 3,
+    "gif": "https://media.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif"
+  },
+  {
+    "id": 8,
+    "question": "What is Sting Energy's primary target demographic?",
+    "options": ["Teenagers", "Young Adults", "Athletes", "All active individuals"],
+    "correctAnswer": 3,
+    "gif": "https://media.giphy.com/media/26AHPxxnSw1L9T1rW/giphy.gif"
+  },
+  {
+    "id": 9,
+    "question": "Which region was Sting Energy first launched in?",
+    "options": ["North America", "Europe", "Asia Pacific", "South America"],
+    "correctAnswer": 2,
+    "gif": "https://media.giphy.com/media/3o7TKqnN349PBUtGFO/giphy.gif"
+  },
+  {
+    "id": 10,
+    "question": "What makes Sting Energy different from other energy drinks?",
+    "options": ["Unique flavor", "Higher caffeine", "Natural ingredients", "All of the above"],
+    "correctAnswer": 3,
+    "gif": "https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif"
+  }
+]
