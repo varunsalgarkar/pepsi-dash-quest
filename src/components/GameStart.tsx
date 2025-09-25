@@ -22,13 +22,6 @@ export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange }: G
       <div className="energy-particles"></div>
       
       <div className="electric-border max-w-2xl w-full bounce-entrance relative">
-        <Button
-          onClick={() => setShowSettings(true)}
-          className="absolute top-4 right-4 glass-button border-sting-orange text-sting-orange hover:bg-sting-orange/10 px-3 py-2 text-sm"
-        >
-          <Settings className="w-4 h-4 mr-1" />
-          Settings
-        </Button>
         
         <div className="electric-border-inner p-8 text-center energy-pulse">
           <div className="mb-8">
@@ -57,7 +50,10 @@ export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange }: G
               <p className="text-sm text-sting-white/70">Build your revenue meter</p>
             </div>
             
-            <div className="glass-card p-4">
+            <div 
+              className="glass-card p-4 cursor-pointer hover:bg-sting-white/5 transition-colors"
+              onClick={() => setShowSettings(true)}
+            >
               <Target className="w-8 h-8 text-correct mx-auto mb-2" />
               <h3 className="font-semibold text-correct">Goal</h3>
               <p className="text-sm text-sting-white/70">Maximize Sting revenue</p>

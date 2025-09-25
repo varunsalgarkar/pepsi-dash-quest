@@ -95,6 +95,7 @@ export const StingGame = () => {
       onRestart={handleRestart}
       currentScore={score}
       totalQuestions={gameQuestions.length}
+      currentQuestionIndex={currentQuestionIndex}
     />
   );
 };

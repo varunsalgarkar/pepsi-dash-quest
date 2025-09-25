@@ -17,9 +17,10 @@ interface GameQuestionProps {
   onRestart: () => void;
   currentScore: number;
   totalQuestions: number;
+  currentQuestionIndex: number;
 }
 
-export const GameQuestion = ({ question, onAnswer, onRestart, currentScore, totalQuestions }: GameQuestionProps) => {
+export const GameQuestion = ({ question, onAnswer, onRestart, currentScore, totalQuestions, currentQuestionIndex }: GameQuestionProps) => {
   const [showGif, setShowGif] = useState(true);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [answered, setAnswered] = useState(false);
@@ -64,7 +65,7 @@ export const GameQuestion = ({ question, onAnswer, onRestart, currentScore, tota
           <div className="mb-4">
             <Clock className="w-6 h-6 sm:w-8 sm:h-8 text-electric-cyan mx-auto mb-2" />
             <h3 className="text-lg sm:text-xl font-bold text-sting-gold">Get Ready!</h3>
-            <p className="text-sting-white/70 text-sm sm:text-base">Question {question.id} coming up...</p>
+            <p className="text-sting-white/70 text-sm sm:text-base">Question {currentQuestionIndex + 1} coming up...</p>
           </div>
           
           <div className="mb-4 sm:mb-6 relative">
@@ -97,7 +98,7 @@ export const GameQuestion = ({ question, onAnswer, onRestart, currentScore, tota
         <div className="mb-6">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm font-medium text-sting-white/70">
-              Question {question.id} of {totalQuestions}
+              Question {currentQuestionIndex + 1} of {totalQuestions}
             </span>
             <div className="flex items-center gap-4">
               <span className="text-sm font-medium text-sting-gold">
@@ -117,7 +118,7 @@ export const GameQuestion = ({ question, onAnswer, onRestart, currentScore, tota
           <div className="w-full bg-neutral/30 rounded-full h-2">
             <div 
               className="sting-gradient h-2 rounded-full transition-all duration-500"
-              style={{ width: `${(question.id - 1) / totalQuestions * 100}%` }}
+              style={{ width: `${currentQuestionIndex / totalQuestions * 100}%` }}
             />
           </div>
         </div>
