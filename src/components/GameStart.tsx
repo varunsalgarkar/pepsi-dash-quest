@@ -17,6 +17,8 @@ export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange, que
   const [tempTime, setTempTime] = useState(questionTime);
   const [diceRolling, setDiceRolling] = useState(false);
   const [selectedSection, setSelectedSection] = useState<string | null>(null);
+  const [selectedEnergySection, setSelectedEnergySection] = useState<string | null>(null);
+  const [showEnergySelector, setShowEnergySelector] = useState(false);
 
   const handleSaveSettings = () => {
     onQuestionsCountChange(tempCount);
@@ -40,10 +42,7 @@ export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange, que
       setSelectedSection(randomSection.id);
       setDiceRolling(false);
       
-      // Show section popup
-      setTimeout(() => {
-        onStart(randomSection.id);
-      }, 2000);
+      // Just show the result, don't auto-start
     }, 2000);
   };
 
@@ -82,10 +81,18 @@ export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange, que
               <p className="text-sm text-sting-white/70">Roll the dice for your category!</p>
             </div>
             
-            <div className="glass-card p-4">
+            <div 
+              className="glass-card p-4 cursor-pointer hover:bg-sting-white/5 transition-colors"
+              onClick={() => setShowEnergySelector(true)}
+            >
               <Zap className="w-8 h-8 text-electric-cyan mx-auto mb-2" />
               <h3 className="font-semibold text-electric-cyan">Energy Boost</h3>
-              <p className="text-sm text-sting-white/70">Build your revenue meter</p>
+              <p className="text-sm text-sting-white/70">
+                {selectedEnergySection ? 
+                  sections.find(s => s.id === selectedEnergySection)?.title : 
+                  "Choose your category!"
+                }
+              </p>
             </div>
             
             <div 
@@ -99,7 +106,7 @@ export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange, que
           </div>
 
           <Button
-            onClick={() => onStart()}
+            onClick={() => onStart(selectedEnergySection || undefined)}
             size="lg"
             className="sting-gradient text-sting-black hover:shadow-[var(--glow-sting)] transition-[var(--transition-bounce)] text-lg px-8 py-6 rounded-xl font-bold glass-button"
           >
@@ -247,6 +254,44 @@ export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange, que
             {diceRolling && (
               <p className="text-sting-white/70">Rolling dice...</p>
             )}
+          </div>
+        </div>
+      )}
+
+      {/* Energy Section Selector Modal */}
+      {showEnergySelector && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
+          <div className="glass-card p-6 max-w-md w-full">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-xl font-bold text-sting-gold">Choose Your Category</h2>
+              <Button
+                onClick={() => setShowEnergySelector(false)}
+                variant="ghost"
+                size="sm"
+                className="text-sting-white hover:bg-sting-white/10"
+              >
+                <X className="w-4 h-4" />
+              </Button>
+            </div>
+            
+            <div className="grid grid-cols-1 gap-3">
+              {sections.map((section) => (
+                <button
+                  key={section.id}
+                  onClick={() => {
+                    setSelectedEnergySection(section.id);
+                    setShowEnergySelector(false);
+                  }}
+                  className={`p-3 rounded-lg border transition-colors text-left ${
+                    selectedEnergySection === section.id
+                      ? 'border-sting-gold bg-sting-gold/10 text-sting-gold'
+                      : 'border-sting-white/20 bg-sting-black/30 text-sting-white hover:border-sting-gold/50'
+                  }`}
+                >
+                  <div className="font-medium">{section.title}</div>
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       )}
