@@ -106,7 +106,7 @@ export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange, que
           </div>
 
           <Button
-            onClick={() => onStart(selectedEnergySection || undefined)}
+            onClick={() => onStart(selectedEnergySection || selectedSection || undefined)}
             size="lg"
             className="sting-gradient text-sting-black hover:shadow-[var(--glow-sting)] transition-[var(--transition-bounce)] text-lg px-8 py-6 rounded-xl font-bold glass-button"
           >
@@ -136,33 +136,33 @@ export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange, que
             </div>
             
             <div className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-sting-white mb-2">
-                  Number of Questions (3-10)
-                </label>
-                <input
-                  type="number"
-                  min="3"
-                  max="10"
-                  value={tempCount}
-                  onChange={(e) => setTempCount(Math.max(3, Math.min(10, parseInt(e.target.value) || 3)))}
-                  className="w-full px-3 py-2 bg-sting-black/30 border border-sting-white/20 rounded-lg text-sting-white focus:border-sting-gold focus:outline-none"
-                />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium text-sting-white mb-2">
-                  Time per Question (10-60 seconds)
-                </label>
-                <input
-                  type="number"
-                  min="10"
-                  max="60"
-                  value={tempTime}
-                  onChange={(e) => setTempTime(Math.max(10, Math.min(60, parseInt(e.target.value) || 30)))}
-                  className="w-full px-3 py-2 bg-sting-black/30 border border-sting-white/20 rounded-lg text-sting-white focus:border-sting-gold focus:outline-none"
-                />
-              </div>
+                <div>
+                  <label className="block text-sm font-medium text-sting-white mb-2">
+                    Number of Questions (3-10)
+                  </label>
+                  <input
+                    type="number"
+                    min="3"
+                    max="10"
+                    value={tempCount}
+                    onChange={(e) => setTempCount(Math.max(3, Math.min(10, parseInt(e.target.value) || 3)))}
+                    className="w-full px-3 py-2 bg-sting-black/30 border border-sting-white/20 rounded-lg text-sting-white focus:border-sting-gold focus:outline-none"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-sting-white mb-2">
+                    Time per Question (10-60 seconds)
+                  </label>
+                  <input
+                    type="number"
+                    min="10"
+                    max="60"
+                    value={tempTime}
+                    onChange={(e) => setTempTime(Math.max(10, Math.min(60, parseInt(e.target.value) || 30)))}
+                    className="w-full px-3 py-2 bg-sting-black/30 border border-sting-white/20 rounded-lg text-sting-white focus:border-sting-gold focus:outline-none"
+                  />
+                </div>
             </div>
             
             <div className="flex gap-3 mt-6">
@@ -187,7 +187,17 @@ export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange, que
       {showDice && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
           <div className="glass-card p-8 max-w-md w-full text-center">
-            <h2 className="text-2xl font-bold text-sting-gold mb-6">Rolling the Dice!</h2>
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="text-2xl font-bold text-sting-gold">Rolling the Dice!</h2>
+              <Button
+                onClick={() => setShowDice(false)}
+                variant="ghost"
+                size="sm"
+                className="text-sting-white hover:bg-sting-white/10"
+              >
+                <X className="w-4 h-4" />
+              </Button>
+            </div>
             
             <div className="relative mx-auto mb-6" style={{width: '120px', height: '120px', perspective: '200px'}}>
               <div 
@@ -246,7 +256,7 @@ export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange, que
                   {sections.find(s => s.id === selectedSection)?.title}
                 </div>
                 <p className="text-sting-white/70">
-                  Starting quiz in this category...
+                  Category selected! Click "Start Energy Quest" to begin.
                 </p>
               </div>
             )}
