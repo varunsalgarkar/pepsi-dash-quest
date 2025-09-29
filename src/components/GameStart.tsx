@@ -3,18 +3,53 @@ import { Button } from "@/components/ui/button";
 import { Trophy, Zap, Target, Settings, X } from "lucide-react";
 
 interface GameStartProps {
-  onStart: () => void;
+  onStart: (sectionId?: string) => void;
   questionsCount: number;
   onQuestionsCountChange: (count: number) => void;
+  questionTime: number;
+  onQuestionTimeChange: (time: number) => void;
 }
 
-export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange }: GameStartProps) => {
+export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange, questionTime, onQuestionTimeChange }: GameStartProps) => {
   const [showSettings, setShowSettings] = useState(false);
+  const [showDice, setShowDice] = useState(false);
   const [tempCount, setTempCount] = useState(questionsCount);
+  const [tempTime, setTempTime] = useState(questionTime);
+  const [diceRolling, setDiceRolling] = useState(false);
+  const [selectedSection, setSelectedSection] = useState<string | null>(null);
 
   const handleSaveSettings = () => {
     onQuestionsCountChange(tempCount);
+    onQuestionTimeChange(tempTime);
     setShowSettings(false);
+  };
+
+  const sections = [
+    { id: "section_1", title: "Energy Drinks", color: "#ff6b6b" },
+    { id: "section_2", title: "Science & Health", color: "#4ecdc4" },
+    { id: "section_3", title: "Business & Marketing", color: "#45b7d1" },
+    { id: "section_4", title: "Sports & Lifestyle", color: "#96ceb4" },
+    { id: "section_5", title: "Geography & Culture", color: "#feca57" },
+    { id: "section_6", title: "Innovation & Future", color: "#ff9ff3" }
+  ];
+
+  const rollDice = () => {
+    setDiceRolling(true);
+    setTimeout(() => {
+      const randomSection = sections[Math.floor(Math.random() * 6)];
+      setSelectedSection(randomSection.id);
+      setDiceRolling(false);
+      
+      // Show section popup
+      setTimeout(() => {
+        onStart(randomSection.id);
+      }, 2000);
+    }, 2000);
+  };
+
+  const handleDiceClick = () => {
+    setShowDice(true);
+    rollDice();
   };
 
   return (
@@ -38,10 +73,13 @@ export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange }: G
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-            <div className="glass-card p-4">
+            <div 
+              className="glass-card p-4 cursor-pointer hover:bg-sting-white/5 transition-colors"
+              onClick={handleDiceClick}
+            >
               <Trophy className="w-8 h-8 text-sting-gold mx-auto mb-2" />
               <h3 className="font-semibold text-sting-gold">Challenge</h3>
-              <p className="text-sm text-sting-white/70">Answer {questionsCount} energy quiz questions correctly</p>
+              <p className="text-sm text-sting-white/70">Roll the dice for your category!</p>
             </div>
             
             <div className="glass-card p-4">
@@ -61,7 +99,7 @@ export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange }: G
           </div>
 
           <Button
-            onClick={onStart}
+            onClick={() => onStart()}
             size="lg"
             className="sting-gradient text-sting-black hover:shadow-[var(--glow-sting)] transition-[var(--transition-bounce)] text-lg px-8 py-6 rounded-xl font-bold glass-button"
           >
@@ -69,7 +107,7 @@ export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange }: G
           </Button>
           
           <div className="mt-6 text-sm text-sting-white/60">
-            <p>⚡ {questionsCount} questions • 💰 Revenue tracking</p>
+            <p>⚡ {questionsCount} questions • ⏱️ {questionTime}s per question • 💰 Revenue tracking</p>
           </div>
         </div>
       </div>
@@ -90,18 +128,34 @@ export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange }: G
               </Button>
             </div>
             
-            <div>
-              <label className="block text-sm font-medium text-sting-white mb-2">
-                Number of Questions (3-10)
-              </label>
-              <input
-                type="number"
-                min="3"
-                max="10"
-                value={tempCount}
-                onChange={(e) => setTempCount(Math.max(3, Math.min(10, parseInt(e.target.value) || 3)))}
-                className="w-full px-3 py-2 bg-sting-black/30 border border-sting-white/20 rounded-lg text-sting-white focus:border-sting-gold focus:outline-none"
-              />
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-sting-white mb-2">
+                  Number of Questions (3-10)
+                </label>
+                <input
+                  type="number"
+                  min="3"
+                  max="10"
+                  value={tempCount}
+                  onChange={(e) => setTempCount(Math.max(3, Math.min(10, parseInt(e.target.value) || 3)))}
+                  className="w-full px-3 py-2 bg-sting-black/30 border border-sting-white/20 rounded-lg text-sting-white focus:border-sting-gold focus:outline-none"
+                />
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-sting-white mb-2">
+                  Time per Question (10-60 seconds)
+                </label>
+                <input
+                  type="number"
+                  min="10"
+                  max="60"
+                  value={tempTime}
+                  onChange={(e) => setTempTime(Math.max(10, Math.min(60, parseInt(e.target.value) || 30)))}
+                  className="w-full px-3 py-2 bg-sting-black/30 border border-sting-white/20 rounded-lg text-sting-white focus:border-sting-gold focus:outline-none"
+                />
+              </div>
             </div>
             
             <div className="flex gap-3 mt-6">
@@ -118,6 +172,81 @@ export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange }: G
                 Save Settings
               </button>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* 3D Dice Modal */}
+      {showDice && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
+          <div className="glass-card p-8 max-w-md w-full text-center">
+            <h2 className="text-2xl font-bold text-sting-gold mb-6">Rolling the Dice!</h2>
+            
+            <div className="relative mx-auto mb-6" style={{width: '120px', height: '120px', perspective: '200px'}}>
+              <div 
+                className={`dice ${diceRolling ? 'rolling' : ''}`}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  position: 'relative',
+                  transformStyle: 'preserve-3d',
+                  transform: diceRolling ? 'rotateX(720deg) rotateY(720deg)' : 
+                    selectedSection === 'section_1' ? 'rotateX(0deg) rotateY(0deg)' :
+                    selectedSection === 'section_2' ? 'rotateX(-90deg) rotateY(0deg)' :
+                    selectedSection === 'section_3' ? 'rotateX(0deg) rotateY(90deg)' :
+                    selectedSection === 'section_4' ? 'rotateX(0deg) rotateY(-90deg)' :
+                    selectedSection === 'section_5' ? 'rotateX(90deg) rotateY(0deg)' :
+                    'rotateX(180deg) rotateY(0deg)',
+                  transition: 'transform 2s ease-out'
+                }}
+              >
+                {sections.map((section, index) => (
+                  <div
+                    key={section.id}
+                    className="dice-face"
+                    style={{
+                      position: 'absolute',
+                      width: '100%',
+                      height: '100%',
+                      border: '2px solid #ffd700',
+                      backgroundColor: section.color,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      fontSize: '10px',
+                      fontWeight: 'bold',
+                      color: 'white',
+                      textAlign: 'center',
+                      padding: '8px',
+                      transform: 
+                        index === 0 ? 'rotateY(0deg) translateZ(60px)' :
+                        index === 1 ? 'rotateY(90deg) translateZ(60px)' :
+                        index === 2 ? 'rotateY(180deg) translateZ(60px)' :
+                        index === 3 ? 'rotateY(-90deg) translateZ(60px)' :
+                        index === 4 ? 'rotateX(90deg) translateZ(60px)' :
+                        'rotateX(-90deg) translateZ(60px)'
+                    }}
+                  >
+                    {section.title}
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            {!diceRolling && selectedSection && (
+              <div className="space-y-4">
+                <div className="text-xl font-bold text-electric-cyan">
+                  {sections.find(s => s.id === selectedSection)?.title}
+                </div>
+                <p className="text-sting-white/70">
+                  Starting quiz in this category...
+                </p>
+              </div>
+            )}
+            
+            {diceRolling && (
+              <p className="text-sting-white/70">Rolling dice...</p>
+            )}
           </div>
         </div>
       )}

@@ -1,39 +1,61 @@
 export interface Question {
-  id: number;
-  question: string;
-  options: string[];
-  correctAnswer: number;
-  gif: string;
+  questionId: string;
+  corpus: string;
+  options: Array<{text: string; isCorrect: boolean}>;
 }
 
-// Function to fetch questions from JSON file
-export const fetchQuestions = async (): Promise<Question[]> => {
+export interface Section {
+  sectionId: string;
+  title: string;
+  questions: Question[];
+}
+
+export interface QuizData {
+  quizTitle: string;
+  description: string;
+  sections: Section[];
+}
+
+// Function to fetch quiz data from JSON file
+export const fetchQuizData = async (): Promise<QuizData> => {
   try {
     const response = await fetch('/questions.json');
     if (!response.ok) {
-      throw new Error('Failed to fetch questions');
+      throw new Error('Failed to fetch quiz data');
     }
     return await response.json();
   } catch (error) {
-    console.error('Error fetching questions:', error);
-    // Fallback questions if fetch fails
-    return [
-      {
-        id: 1,
-        question: "What year was Sting Energy Drink first launched?",
-        options: ["2002", "2004", "2006", "2008"],
-        correctAnswer: 0,
-        gif: "https://media.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif"
-      },
-      {
-        id: 2,
-        question: "What is the main ingredient that gives Sting its energy boost?",
-        options: ["Taurine", "Caffeine", "Ginseng", "All of the above"],
-        correctAnswer: 3,
-        gif: "https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif"
-      }
-    ];
+    console.error('Error fetching quiz data:', error);
+    // Fallback data if fetch fails
+    return {
+      quizTitle: "Sting Energy Quiz",
+      description: "Test your energy knowledge",
+      sections: [
+        {
+          sectionId: "section_1",
+          title: "Category: Energy Drinks",
+          questions: [
+            {
+              questionId: "q_1_1",
+              corpus: "What year was Sting Energy Drink first launched?",
+              options: [
+                {"text": "2002", "isCorrect": true},
+                {"text": "2004", "isCorrect": false},
+                {"text": "2006", "isCorrect": false},
+                {"text": "2008", "isCorrect": false}
+              ]
+            }
+          ]
+        }
+      ]
+    };
   }
+};
+
+// Function to get questions from a specific section
+export const getQuestionsFromSection = (quizData: QuizData, sectionId: string): Question[] => {
+  const section = quizData.sections.find(s => s.sectionId === sectionId);
+  return section ? section.questions : [];
 };
 
 // Function to get random questions without repetition

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { GameStart } from "./GameStart";
 import { GameQuestion } from "./GameQuestion";
 import { GameResults } from "./GameResults";
-import { fetchQuestions, getRandomQuestions, Question } from "@/data/gameData";
+import { fetchQuizData, getQuestionsFromSection, getRandomQuestions, Question, QuizData } from "@/data/gameData";
 
 type GameState = "start" | "playing" | "results";
 
@@ -11,28 +11,42 @@ export const StingGame = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [questionsCount, setQuestionsCount] = useState(5);
+  const [questionTime, setQuestionTime] = useState(30);
   const [gameQuestions, setGameQuestions] = useState<Question[]>([]);
   const [loading, setLoading] = useState(true);
+  const [quizData, setQuizData] = useState<QuizData | null>(null);
+  const [selectedSection, setSelectedSection] = useState<string | null>(null);
 
-  // Load questions on component mount and when questions count changes
+  // Load quiz data on component mount
   useEffect(() => {
-    const loadQuestions = async () => {
+    const loadQuizData = async () => {
       setLoading(true);
-      const allQuestions = await fetchQuestions();
-      const selectedQuestions = getRandomQuestions(allQuestions, questionsCount);
-      setGameQuestions(selectedQuestions);
+      const data = await fetchQuizData();
+      setQuizData(data);
       setLoading(false);
     };
     
-    loadQuestions();
-  }, [questionsCount]);
+    loadQuizData();
+  }, []);
 
-  const handleStart = async () => {
-    // Refresh questions for new game
+  const handleStart = async (sectionId?: string) => {
+    if (!quizData) return;
+    
     setLoading(true);
-    const allQuestions = await fetchQuestions();
-    const selectedQuestions = getRandomQuestions(allQuestions, questionsCount);
-    setGameQuestions(selectedQuestions);
+    let questionsToUse: Question[] = [];
+    
+    if (sectionId) {
+      // Use questions from specific section
+      setSelectedSection(sectionId);
+      const sectionQuestions = getQuestionsFromSection(quizData, sectionId);
+      questionsToUse = getRandomQuestions(sectionQuestions, questionsCount);
+    } else {
+      // Use questions from all sections randomly
+      const allQuestions = quizData.sections.flatMap(section => section.questions);
+      questionsToUse = getRandomQuestions(allQuestions, questionsCount);
+    }
+    
+    setGameQuestions(questionsToUse);
     setGameState("playing");
     setCurrentQuestionIndex(0);
     setScore(0);
@@ -74,6 +88,8 @@ export const StingGame = () => {
         onStart={handleStart} 
         questionsCount={questionsCount}
         onQuestionsCountChange={setQuestionsCount}
+        questionTime={questionTime}
+        onQuestionTimeChange={setQuestionTime}
       />
     );
   }
@@ -96,6 +112,7 @@ export const StingGame = () => {
       currentScore={score}
       totalQuestions={gameQuestions.length}
       currentQuestionIndex={currentQuestionIndex}
+      questionTime={questionTime}
     />
   );
 };
