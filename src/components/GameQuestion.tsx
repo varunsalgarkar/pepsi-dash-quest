@@ -28,12 +28,13 @@ export const GameQuestion = ({ question, onAnswer, onRestart, currentScore, tota
 
   // Reset state when question changes
   useEffect(() => {
-    setShowGif(true);
+    // Only show preloading screen for the first question
+    setShowGif(currentQuestionIndex === 0);
     setSelectedAnswer(null);
     setAnswered(false);
     setCountdown(5);
     setQuestionCountdown(questionTime);
-  }, [question.questionId, questionTime]);
+  }, [question.questionId, questionTime, currentQuestionIndex]);
 
   useEffect(() => {
     if (showGif && countdown > 0) {

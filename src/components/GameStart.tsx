@@ -108,7 +108,7 @@ export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange, que
           <Button
             onClick={() => onStart(selectedEnergySection || selectedSection || undefined)}
             size="lg"
-            className="sting-gradient text-sting-black hover:shadow-[var(--glow-sting)] transition-[var(--transition-bounce)] text-lg px-8 py-6 rounded-xl font-bold glass-button"
+            className="sting-gradient text-sting-black hover:bg-sting-black hover:text-sting-white hover:shadow-[var(--glow-sting)] transition-[var(--transition-bounce)] text-lg px-8 py-6 rounded-xl font-bold glass-button"
           >
             ⚡ START ENERGY QUEST
           </Button>
