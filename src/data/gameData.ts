@@ -1,51 +1,68 @@
 export interface Question {
-  id: number;
-  question: string;
-  options: string[];
-  correctAnswer: number;
-  gif: string;
+  questionId: string;
+  corpus: string;
+  options: Array<{text: string; isCorrect: boolean}>;
 }
 
-export const gameQuestions: Question[] = [
-  {
-    id: 1,
-    question: "What year was Sting Energy Drink first launched?",
-    options: ["2002", "2004", "2006", "2008"],
-    correctAnswer: 0, // 2002
-    gif: "https://media.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif"
-  },
-  {
-    id: 2,
-    question: "What is the main ingredient that gives Sting its energy boost?",
-    options: ["Taurine", "Caffeine", "Ginseng", "All of the above"],
-    correctAnswer: 3, // All of the above
-    gif: "https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif"
-  },
-  {
-    id: 3,
-    question: "Which company owns the Sting Energy brand?",
-    options: ["Red Bull", "PepsiCo", "Coca-Cola", "Monster"],
-    correctAnswer: 1, // PepsiCo
-    gif: "https://media.giphy.com/media/26AHPxxnSw1L9T1rW/giphy.gif"
-  },
-  {
-    id: 4,
-    question: "What is Sting's signature flavor profile?",
-    options: ["Tropical", "Berry", "Gold Rush", "Citrus"],
-    correctAnswer: 2, // Gold Rush
-    gif: "https://media.giphy.com/media/3o7TKqnN349PBUtGFO/giphy.gif"
-  },
-  {
-    id: 5,
-    question: "In how many countries is Sting Energy available?",
-    options: ["Over 50", "Over 100", "Over 150", "Over 200"],
-    correctAnswer: 2, // Over 150
-    gif: "https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif"
-  }
-];
+export interface Section {
+  sectionId: string;
+  title: string;
+  questions: Question[];
+}
 
-// Helper function to get total number of questions/checkpoints
-export const getTotalQuestions = (): number => gameQuestions.length;
+export interface QuizData {
+  quizTitle: string;
+  description: string;
+  sections: Section[];
+}
+
+// Function to fetch quiz data from JSON file
+export const fetchQuizData = async (): Promise<QuizData> => {
+  try {
+    const response = await fetch('/questions.json');
+    if (!response.ok) {
+      throw new Error('Failed to fetch quiz data');
+    }
+    return await response.json();
+  } catch (error) {
+    console.error('Error fetching quiz data:', error);
+    // Fallback data if fetch fails
+    return {
+      quizTitle: "Sting Energy Quiz",
+      description: "Test your energy knowledge",
+      sections: [
+        {
+          sectionId: "section_1",
+          title: "Category: Energy Drinks",
+          questions: [
+            {
+              questionId: "q_1_1",
+              corpus: "What year was Sting Energy Drink first launched?",
+              options: [
+                {"text": "2002", "isCorrect": true},
+                {"text": "2004", "isCorrect": false},
+                {"text": "2006", "isCorrect": false},
+                {"text": "2008", "isCorrect": false}
+              ]
+            }
+          ]
+        }
+      ]
+    };
+  }
+};
+
+// Function to get questions from a specific section
+export const getQuestionsFromSection = (quizData: QuizData, sectionId: string): Question[] => {
+  const section = quizData.sections.find(s => s.sectionId === sectionId);
+  return section ? section.questions : [];
+};
+
+// Function to get random questions without repetition
+export const getRandomQuestions = (allQuestions: Question[], count: number): Question[] => {
+  const shuffled = [...allQuestions].sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, Math.min(count, allQuestions.length));
+};
 
 export const getRevenueMessage = (score: number, total: number): string => {
   const percentage = (score / total) * 100;
