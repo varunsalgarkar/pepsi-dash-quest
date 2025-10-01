@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Trophy, Zap, Target, Settings, X } from "lucide-react";
 import { BrandLogo } from "./brandlogo";
 
+
 interface GameStartProps {
   onStart: (sectionId?: string) => void;
   questionsCount: number;

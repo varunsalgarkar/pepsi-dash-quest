@@ -30,6 +30,7 @@ export const GameQuestion = ({ question, onAnswer, onRestart, currentScore, tota
   useEffect(() => {
     // setShowGif(true);
     setShowGif(currentQuestionIndex === 0)
+
     setSelectedAnswer(null);
     setAnswered(false);
     setCountdown(3);
