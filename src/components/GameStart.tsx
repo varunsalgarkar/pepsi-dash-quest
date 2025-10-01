@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Trophy, Zap, Target, Settings, X } from "lucide-react";
+import { BrandLogo } from "./BrandLogo";
 
 interface GameStartProps {
   onStart: (sectionId?: string) => void;
@@ -54,6 +55,7 @@ export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange, que
   return (
     <div className="min-h-screen flex items-center justify-center p-4 sting-bg relative">
       <div className="energy-particles"></div>
+      <BrandLogo src="/StingNightFuel.jpg" alt="Sting Energy" />
       
       <div className="electric-border max-w-2xl w-full bounce-entrance relative">
         
