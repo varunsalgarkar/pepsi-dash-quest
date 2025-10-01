@@ -23,20 +23,18 @@ export const GameQuestion = ({ question, onAnswer, onRestart, currentScore, tota
   const [showGif, setShowGif] = useState(true);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [answered, setAnswered] = useState(false);
-  const [countdown, setCountdown] = useState(5);
+  const [countdown, setCountdown] = useState(3);
   const [questionCountdown, setQuestionCountdown] = useState(questionTime);
 
   // Reset state when question changes
   useEffect(() => {
     // setShowGif(true);
     setShowGif(currentQuestionIndex === 0)
-
-
     setSelectedAnswer(null);
     setAnswered(false);
-    setCountdown(5);
+    setCountdown(3);
     setQuestionCountdown(questionTime);
-  }, [question.questionId, questionTime]);
+  }, [question.questionId, questionTime , currentQuestionIndex]);
 
   useEffect(() => {
     if (showGif && countdown > 0) {
