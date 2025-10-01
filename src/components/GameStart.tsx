@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Trophy, Zap, Target, Settings, X } from "lucide-react";
+import { BrandLogo } from "./brandlogo";
 
 interface GameStartProps {
   onStart: (sectionId?: string) => void;
@@ -27,12 +28,13 @@ export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange, que
   };
 
   const sections = [
-    { id: "section_1", title: "Energy Drinks", color: "#ff6b6b" },
-    { id: "section_2", title: "Science & Health", color: "#4ecdc4" },
-    { id: "section_3", title: "Business & Marketing", color: "#45b7d1" },
-    { id: "section_4", title: "Sports & Lifestyle", color: "#96ceb4" },
-    { id: "section_5", title: "Geography & Culture", color: "#feca57" },
-    { id: "section_6", title: "Innovation & Future", color: "#ff9ff3" }
+    { id: "section_1", title: "Women Empowerment", color: "#ff6b6b" },
+    { id: "section_2", title: "Safe Water & Wash", color: "#4ecdc4" },
+    { id: "section_3", title: "Food for Good", color: "#45b7d1" },
+    { id: "section_4", title: "Blood Donation", color: "#96ceb4" },
+    { id: "section_5", title: "Pep+", color: "#feca57" },
+    { id: "section_6", title: "Partners -Nirmaan , Akshaypatra, SWN", color: "#ff9ff3" },
+    { id: "section_7", title: "Green Team", color: "#f71156ff" }    
   ];
 
   const rollDice = () => {
@@ -54,13 +56,14 @@ export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange, que
   return (
     <div className="min-h-screen flex items-center justify-center p-4 sting-bg relative">
       <div className="energy-particles"></div>
-      
+      <BrandLogo src="/pep_logo.png" alt="Pep+ Logo"/>
+
       <div className="electric-border max-w-2xl w-full bounce-entrance relative">
         
         <div className="electric-border-inner p-8 text-center energy-pulse">
           <div className="mb-8">
             <h1 className="text-6xl font-bold mb-4 sting-gradient bg-clip-text text-transparent">
-              STING ENERGY QUIZ
+              CSR ENERGY QUIZ
             </h1>
             <p className="text-xl text-sting-gold mb-2">
               Test your energy knowledge and maximize revenue!
@@ -108,7 +111,7 @@ export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange, que
           <Button
             onClick={() => onStart(selectedEnergySection || selectedSection || undefined)}
             size="lg"
-            className="sting-gradient text-sting-black hover:shadow-[var(--glow-sting)] transition-[var(--transition-bounce)] text-lg px-8 py-6 rounded-xl font-bold glass-button"
+            className="sting-gradient text-sting-black hover:bg-sting-black hover:text-sting-white hover:shadow-[var(--glow-sting)] transition-[var(--transition-bounce)] text-lg px-8 py-6 rounded-xl font-bold glass-button"
           >
             ⚡ START ENERGY QUEST
           </Button>
@@ -253,7 +256,7 @@ export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange, que
             {!diceRolling && selectedSection && (
               <div className="space-y-4">
                 <div className="text-xl font-bold text-electric-cyan">
-                  {sections.find(s => s.id === selectedSection)?.title}
+                  {/* {sections.find(s => s.id === selectedSection)?.title} */}
                 </div>
                 <p className="text-sting-white/70">
                   Category selected! Click "Start Energy Quest" to begin.
