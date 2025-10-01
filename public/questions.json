@@ -1,939 +1,169 @@
 {
-  "quizTitle": "PepsiCo Company, Brands, and Sustainability Quiz",
-  "description": "A comprehensive quiz covering PepsiCo, its brands, values, and sustainability initiatives (pep+).",
+  "quizTitle": "Sting Energy Knowledge Quiz",
+  "description": "Test your knowledge across 6 different categories related to energy drinks and general knowledge.",
   "sections": [
     {
       "sectionId": "section_1",
-      "title": "Category: PepsiCo Sustainability",
+      "title": "Category: Energy Drinks",
       "questions": [
         {
-          "questionId": "q_1_1_E",
-          "corpus": "What is the name of PepsiCo's end-to-end strategic transformation, putting sustainability at the center of its business?",
+          "questionId": "q_1_1",
+          "corpus": "What year was Sting Energy Drink first launched?",
           "options": [
-            {"text": "PepsiCo Green", "isCorrect": false},
-            {"text": "Planet First", "isCorrect": false},
-            {"text": "PepsiCo Positive (pep+)", "isCorrect": true},
-            {"text": "Global Impact Initiative", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_1_2_E",
-          "corpus": "One of PepsiCo's primary focus areas for sustainable agriculture is driving the adoption of what type of farming practices?",
-          "options": [
-            {"text": "Hydroponic", "isCorrect": false},
-            {"text": "Regenerative", "isCorrect": true},
-            {"text": "Organic-Only", "isCorrect": false},
-            {"text": "Precision", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_1_3_E",
-          "corpus": "PepsiCo's climate strategy is aligned with limiting global warming to what temperature target?",
-          "options": [
-            {"text": "2.0°C", "isCorrect": false},
-            {"text": "3.5°C", "isCorrect": false},
-            {"text": "1.5°C", "isCorrect": true},
-            {"text": "2.5°C", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_1_4_E",
-          "corpus": "PepsiCo aims to achieve **net-zero emissions** by what year?",
-          "options": [
-            {"text": "2030", "isCorrect": false},
-            {"text": "2040", "isCorrect": false},
-            {"text": "2050", "isCorrect": true},
-            {"text": "2035", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_1_5_E",
-          "corpus": "Which of the following is **NOT** one of the three core pillars of the pep+ strategy?",
-          "options": [
-            {"text": "Positive Choices", "isCorrect": false},
-            {"text": "Positive Retail", "isCorrect": true},
-            {"text": "Positive Agriculture", "isCorrect": false},
-            {"text": "Positive Value Chain", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_1_6_E",
-          "corpus": "PepsiCo's 'Water Positive' vision primarily focuses on which type of areas?",
-          "options": [
-            {"text": "Coastal Regions", "isCorrect": false},
-            {"text": "Developing Markets", "isCorrect": false},
-            {"text": "High Water-Risk Areas", "isCorrect": true},
-            {"text": "Bottling Facilities Only", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_1_7_E",
-          "corpus": "PepsiCo is working to reduce its use of which material in its packaging?",
-          "options": [
-            {"text": "Aluminum", "isCorrect": false},
-            {"text": "Virgin Plastic", "isCorrect": true},
-            {"text": "Cardboard", "isCorrect": false},
-            {"text": "Glass", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_1_8_E",
-          "corpus": "What type of emissions are primarily related to PepsiCo's direct operations, such as its manufacturing plants and fleet vehicles?",
-          "options": [
-            {"text": "Scope 3", "isCorrect": false},
-            {"text": "Scope 4", "isCorrect": false},
-            {"text": "Scope 1 and 2", "isCorrect": true},
-            {"text": "Scope 0", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_1_9_E",
-          "corpus": "By 2030, PepsiCo aims to drive regenerative practices across how many million acres of farmland?",
-          "options": [
-            {"text": "5 million", "isCorrect": false},
-            {"text": "10 million", "isCorrect": true},
-            {"text": "25 million", "isCorrect": false},
-            {"text": "50 million", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_1_10_E",
-          "corpus": "What does the 'P' in 'pep+' stand for?",
-          "options": [
-            {"text": "Packaging", "isCorrect": false},
-            {"text": "People", "isCorrect": false},
-            {"text": "Positive", "isCorrect": true},
-            {"text": "Planet", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_1_11_M",
-          "corpus": "Against what baseline year are PepsiCo's 2030 climate goals for Scope 1, 2, and 3 emissions typically measured?",
-          "options": [
-            {"text": "2015", "isCorrect": false},
-            {"text": "2020", "isCorrect": false},
-            {"text": "2022", "isCorrect": true},
+            {"text": "2002", "isCorrect": true},
+            {"text": "2004", "isCorrect": false},
+            {"text": "2006", "isCorrect": false},
             {"text": "2008", "isCorrect": false}
           ]
         },
         {
-          "questionId": "q_1_12_M",
-          "corpus": "Which category of emissions, predominantly from the supply chain (e.g., agriculture and transportation), accounts for the vast majority of PepsiCo's carbon footprint?",
+          "questionId": "q_1_2",
+          "corpus": "What is the main ingredient that gives Sting its energy boost?",
           "options": [
-            {"text": "Scope 1", "isCorrect": false},
-            {"text": "Scope 2", "isCorrect": false},
-            {"text": "Scope 3", "isCorrect": true},
-            {"text": "Direct Emissions", "isCorrect": false}
+            {"text": "Taurine", "isCorrect": false},
+            {"text": "Caffeine", "isCorrect": false},
+            {"text": "Ginseng", "isCorrect": false},
+            {"text": "All of the above", "isCorrect": true}
           ]
         },
         {
-          "questionId": "q_1_13_M",
-          "corpus": "What specific area does the 'FLAG' component of PepsiCo's Scope 3 emissions target refer to?",
+          "questionId": "q_1_3",
+          "corpus": "Which company owns the Sting Energy brand?",
           "options": [
-            {"text": "Facilities, Logistics, and Governance", "isCorrect": false},
-            {"text": "Farming, Land, and Global Operations", "isCorrect": false},
-            {"text": "Forest, Land and Agriculture", "isCorrect": true},
-            {"text": "Fleet, Labor, and Acquisition Growth", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_1_14_M",
-          "corpus": "PepsiCo's 'Positive Choices' pillar includes goals for reducing which three components in their food and beverage portfolios?",
-          "options": [
-            {"text": "Carbohydrates, Caffeine, and Artificial Colors", "isCorrect": false},
-            {"text": "Added Sugars, Sodium, and Saturated Fat", "isCorrect": true},
-            {"text": "Fats, Protein, and Vitamins", "isCorrect": false},
-            {"text": "Total Calories, Cholesterol, and Fiber", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_1_15_M",
-          "corpus": "PepsiCo's goal for renewable electricity is to source 100% of its direct global electricity needs from renewable sources by which year?",
-          "options": [
-            {"text": "2030", "isCorrect": true},
-            {"text": "2040", "isCorrect": false},
-            {"text": "2025", "isCorrect": false},
-            {"text": "2050", "isCorrect": false}
+            {"text": "Red Bull", "isCorrect": false},
+            {"text": "PepsiCo", "isCorrect": true},
+            {"text": "Coca-Cola", "isCorrect": false},
+            {"text": "Monster", "isCorrect": false}
           ]
         }
       ]
     },
     {
       "sectionId": "section_2",
-      "title": "Category: PepsiCo Products",
+      "title": "Category: Science & Health",
       "questions": [
         {
-          "questionId": "q_2_1_E",
-          "corpus": "Which sports drink brand, known for its electrolytes, is owned by PepsiCo?",
+          "questionId": "q_2_1",
+          "corpus": "What is the caffeine content in a standard Sting Energy can?",
           "options": [
-            {"text": "Powerade", "isCorrect": false},
-            {"text": "Gatorade", "isCorrect": true},
-            {"text": "BodyArmor", "isCorrect": false},
-            {"text": "Vitaminwater", "isCorrect": false}
+            {"text": "80mg", "isCorrect": false},
+            {"text": "100mg", "isCorrect": true},
+            {"text": "120mg", "isCorrect": false},
+            {"text": "140mg", "isCorrect": false}
           ]
         },
         {
-          "questionId": "q_2_2_E",
-          "corpus": "How many billion-dollar brands does PepsiCo's portfolio contain?",
+          "questionId": "q_2_2",
+          "corpus": "What makes Sting Energy different from other energy drinks?",
           "options": [
-            {"text": "Fewer than 10", "isCorrect": false},
-            {"text": "Exactly 15", "isCorrect": false},
-            {"text": "Over 23", "isCorrect": true},
-            {"text": "Between 30 and 40", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_2_3_E",
-          "corpus": "Which brand, known for its breakfast foods like oatmeal and cereal, is part of the PepsiCo family?",
-          "options": [
-            {"text": "Kellogg's", "isCorrect": false},
-            {"text": "Quaker Oats", "isCorrect": true},
-            {"text": "Post", "isCorrect": false},
-            {"text": "General Mills", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_2_4_E",
-          "corpus": "What is the name of PepsiCo's popular bottled water brand?",
-          "options": [
-            {"text": "Dasani", "isCorrect": false},
-            {"text": "Fiji Water", "isCorrect": false},
-            {"text": "Aquafina", "isCorrect": true},
-            {"text": "Smartwater", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_2_5_E",
-          "corpus": "Which of these brands is a PepsiCo beverage, often associated with a lemon-lime flavor?",
-          "options": [
-            {"text": "Sierra Mist / Starry", "isCorrect": true},
-            {"text": "Sprite", "isCorrect": false},
-            {"text": "Fanta", "isCorrect": false},
-            {"text": "Seagram's", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_2_6_E",
-          "corpus": "In which product category did PepsiCo expand its functional beverage offerings with the acquisition of the Rockstar Energy brand?",
-          "options": [
-            {"text": "Dairy", "isCorrect": false},
-            {"text": "Plant-Based Milk", "isCorrect": false},
-            {"text": "Energy Drinks", "isCorrect": true},
-            {"text": "Coffee", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_2_7_E",
-          "corpus": "What snack brand, owned by PepsiCo, is famous for its cheese-flavored puff snacks?",
-          "options": [
-            {"text": "Pringles", "isCorrect": false},
-            {"text": "Cheetos", "isCorrect": true},
-            {"text": "Bugles", "isCorrect": false},
-            {"text": "Pirate's Booty", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_2_8_E",
-          "corpus": "Which PepsiCo brand focuses on carbonation machines for creating custom sodas at home?",
-          "options": [
-            {"text": "bubly", "isCorrect": false},
-            {"text": "Izze", "isCorrect": false},
-            {"text": "SodaStream", "isCorrect": true},
-            {"text": "Naked Juice", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_2_9_E",
-          "corpus": "What is the primary product of the Fritos brand, a core PepsiCo snack?",
-          "options": [
-            {"text": "Potato Chips", "isCorrect": false},
-            {"text": "Pretzels", "isCorrect": false},
-            {"text": "Corn Chips", "isCorrect": true},
-            {"text": "Tortilla Chips", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_2_10_E",
-          "corpus": "Which juice company did PepsiCo acquire in 1998, significantly bolstering its beverage portfolio beyond soda?",
-          "options": [
-            {"text": "Minute Maid", "isCorrect": false},
-            {"text": "Simply Orange", "isCorrect": false},
-            {"text": "Tropicana Products", "isCorrect": true},
-            {"text": "Odwalla", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_2_11_M",
-          "corpus": "The Quaker Oats acquisition in 2001 brought which major sports drink brand into the PepsiCo portfolio?",
-          "options": [
-            {"text": "Propel", "isCorrect": false},
-            {"text": "Gatorade", "isCorrect": true},
-            {"text": "Bodyarmor", "isCorrect": false},
-            {"text": "Rockstar", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_2_12_M",
-          "corpus": "PepsiCo's ready-to-drink coffee products are distributed through a partnership with which major coffee company?",
-          "options": [
-            {"text": "Dunkin'", "isCorrect": false},
-            {"text": "Tim Hortons", "isCorrect": false},
-            {"text": "Starbucks", "isCorrect": true},
-            {"text": "Folgers", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_2_13_M",
-          "corpus": "Which snack brand, known for its cheese-flavored popcorn, was acquired by Frito-Lay in the late 1980s?",
-          "options": [
-            {"text": "Pop Secret", "isCorrect": false},
-            {"text": "Smartfood", "isCorrect": true},
-            {"text": "Pop Weaver", "isCorrect": false},
-            {"text": "Cracker Jack", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_2_14_M",
-          "corpus": "What percentage of PepsiCo's net revenues did the company report came from international markets in 2023?",
-          "options": [
-            {"text": "About 10%", "isCorrect": false},
-            {"text": "Nearly half", "isCorrect": true},
-            {"text": "About three-quarters", "isCorrect": false},
-            {"text": "Less than a third", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_2_15_M",
-          "corpus": "In addition to Lay's, Ruffles, and Tostitos, which of the following snack brands is also a major Frito-Lay offering in North America?",
-          "options": [
-            {"text": "Pringles", "isCorrect": false},
-            {"text": "Combos", "isCorrect": false},
-            {"text": "SunChips", "isCorrect": true},
-            {"text": "Goldfish", "isCorrect": false}
+            {"text": "Unique flavor", "isCorrect": false},
+            {"text": "Higher caffeine", "isCorrect": false},
+            {"text": "Natural ingredients", "isCorrect": false},
+            {"text": "All of the above", "isCorrect": true}
           ]
         }
       ]
     },
     {
       "sectionId": "section_3",
-      "title": "Category: Frito Lay",
+      "title": "Category: Business & Marketing",
       "questions": [
         {
-          "questionId": "q_3_1_E",
-          "corpus": "Frito-Lay was formed by the merger of The Frito Company and what other company in 1961?",
+          "questionId": "q_3_1",
+          "corpus": "What is Sting Energy's primary target demographic?",
           "options": [
-            {"text": "The Lay Potato Company", "isCorrect": false},
-            {"text": "H.W. Lay & Company", "isCorrect": true},
-            {"text": "The Herman Snack Co.", "isCorrect": false},
-            {"text": "The Doolin Chip Group", "isCorrect": false}
+            {"text": "Teenagers", "isCorrect": false},
+            {"text": "Young Adults", "isCorrect": false},
+            {"text": "Athletes", "isCorrect": false},
+            {"text": "All active individuals", "isCorrect": true}
           ]
         },
         {
-          "questionId": "q_3_2_E",
-          "corpus": "Who was the founder of The Frito Company, which began by making Fritos corn chips in 1932?",
+          "questionId": "q_3_2",
+          "corpus": "In how many countries is Sting Energy available?",
           "options": [
-            {"text": "Herman Lay", "isCorrect": false},
-            {"text": "Charles Elmer Doolin", "isCorrect": true},
-            {"text": "Caleb Bradham", "isCorrect": false},
-            {"text": "Donald Kendall", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_3_3_E",
-          "corpus": "Which Frito-Lay product was introduced in 1966 and originally struggled before being relaunched with Taco and Nacho Cheese flavors?",
-          "options": [
-            {"text": "Fritos", "isCorrect": false},
-            {"text": "Cheetos", "isCorrect": false},
-            {"text": "Doritos", "isCorrect": true},
-            {"text": "Ruffles", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_3_4_E",
-          "corpus": "The Frito-Lay division is headquartered in what U.S. state?",
-          "options": [
-            {"text": "New York", "isCorrect": false},
-            {"text": "California", "isCorrect": false},
-            {"text": "Texas", "isCorrect": true},
-            {"text": "North Carolina", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_3_5_E",
-          "corpus": "Frito-Lay products are primarily distributed via what method, known for its extensive network?",
-          "options": [
-            {"text": "Third-Party Logistics", "isCorrect": false},
-            {"text": "Direct Store Delivery (DSD) system", "isCorrect": true},
-            {"text": "Warehouse Shipping", "isCorrect": false},
-            {"text": "Mail Order System", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_3_6_E",
-          "corpus": "Which Frito-Lay snack is known for its ridges (or 'Ruffles have ridges')?",
-          "options": [
-            {"text": "Lay's", "isCorrect": false},
-            {"text": "Ruffles", "isCorrect": true},
-            {"text": "Kettle Brand", "isCorrect": false},
-            {"text": "Smartfood", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_3_7_E",
-          "corpus": "The Frito-Lay company officially became a subsidiary of PepsiCo in what year?",
-          "options": [
-            {"text": "1948", "isCorrect": false},
-            {"text": "1965", "isCorrect": true},
-            {"text": "1977", "isCorrect": false},
-            {"text": "1980", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_3_8_E",
-          "corpus": "What Frito-Lay brand is primarily associated with dip-friendly tortilla chips?",
-          "options": [
-            {"text": "Doritos", "isCorrect": false},
-            {"text": "Fritos", "isCorrect": false},
-            {"text": "Tostitos", "isCorrect": true},
-            {"text": "Munchos", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_3_9_E",
-          "corpus": "Which brand was acquired by Frito-Lay in 1980 and subsequently launched nationwide in the United States in 1983?",
-          "options": [
-            {"text": "Stacy's Pita Chips", "isCorrect": false},
-            {"text": "Funyuns", "isCorrect": false},
-            {"text": "Grandma's Cookies", "isCorrect": true},
-            {"text": "Red Rock Deli", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_3_10_E",
-          "corpus": "Which classic cracker/pretzel brand, known for its small twisted snacks, was acquired by H.W. Lay and Company just before the Frito-Lay merger?",
-          "options": [
-            {"text": "Snyder's", "isCorrect": false},
-            {"text": "Rold Gold", "isCorrect": true},
-            {"text": "Utz", "isCorrect": false},
-            {"text": "Cheez-It", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_3_11_M",
-          "corpus": "Which Frito-Lay mascot was discontinued in 1971 due to controversy over racial stereotyping?",
-          "options": [
-            {"text": "Chester Cheetah", "isCorrect": false},
-            {"text": "The Frito Bandito", "isCorrect": true},
-            {"text": "The Lay's Tater", "isCorrect": false},
-            {"text": "The Sun Chip Guy", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_3_12_M",
-          "corpus": "In the early 1930s, how much money did C.E. Doolin borrow from his mother to purchase the corn chip recipe and start The Frito Company?",
-          "options": [
-            {"text": "$10", "isCorrect": false},
-            {"text": "$100", "isCorrect": true},
-            {"text": "$500", "isCorrect": false},
-            {"text": "$1,000", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_3_13_M",
-          "corpus": "What was the initial annual revenue of Frito-Lay, Inc. after the 1961 merger of The Frito Company and H.W. Lay & Company?",
-          "options": [
-            {"text": "$50 million", "isCorrect": false},
-            {"text": "$510 million", "isCorrect": false},
-            {"text": "$127 million", "isCorrect": true},
-            {"text": "$2 billion", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_3_14_M",
-          "corpus": "In the early 1960s, which famous comedian/clown was picked to star in a wide range of Lay's Potato Chip advertisements?",
-          "options": [
-            {"text": "Bozo the Clown", "isCorrect": false},
-            {"text": "Red Skelton", "isCorrect": false},
-            {"text": "Bert Lahr", "isCorrect": true},
-            {"text": "Soupy Sales", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_3_15_M",
-          "corpus": "Frito-Lay North America generates approximately what fraction of PepsiCo's total annual operating profit?",
-          "options": [
-            {"text": "One-tenth", "isCorrect": false},
-            {"text": "One-third", "isCorrect": true},
-            {"text": "One-half", "isCorrect": false},
-            {"text": "Two-thirds", "isCorrect": false}
+            {"text": "Over 50", "isCorrect": false},
+            {"text": "Over 100", "isCorrect": false},
+            {"text": "Over 150", "isCorrect": true},
+            {"text": "Over 200", "isCorrect": false}
           ]
         }
       ]
     },
     {
       "sectionId": "section_4",
-      "title": "Category: Pepsi",
+      "title": "Category: Sports & Lifestyle",
       "questions": [
         {
-          "questionId": "q_4_1_E",
-          "corpus": "What was the original name of the soft drink, invented in 1893 by Caleb Bradham?",
+          "questionId": "q_4_1",
+          "corpus": "Which sports event does Sting Energy commonly sponsor?",
           "options": [
-            {"text": "Brad's Drink", "isCorrect": true},
-            {"text": "Bradham's Brew", "isCorrect": false},
-            {"text": "New Bern Soda", "isCorrect": false},
-            {"text": "The Digestive Cola", "isCorrect": false}
+            {"text": "Football", "isCorrect": false},
+            {"text": "Basketball", "isCorrect": false},
+            {"text": "Cricket", "isCorrect": false},
+            {"text": "All of the above", "isCorrect": true}
           ]
         },
         {
-          "questionId": "q_4_2_E",
-          "corpus": "In what U.S. state was Pepsi first invented?",
+          "questionId": "q_4_2",
+          "corpus": "What is Sting's signature flavor profile?",
           "options": [
-            {"text": "New York", "isCorrect": false},
-            {"text": "Georgia", "isCorrect": false},
-            {"text": "North Carolina", "isCorrect": true},
-            {"text": "Texas", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_4_3_E",
-          "corpus": "What popular citrus-flavored soda brand was acquired by Pepsi-Cola in 1964?",
-          "options": [
-            {"text": "7-Up", "isCorrect": false},
-            {"text": "Sprite", "isCorrect": false},
-            {"text": "Mountain Dew", "isCorrect": true},
-            {"text": "Sun Drop", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_4_4_E",
-          "corpus": "The 'Pepsi Challenge' marketing campaign, which featured blind taste tests, began in which decade?",
-          "options": [
-            {"text": "1960s", "isCorrect": false},
-            {"text": "1970s", "isCorrect": true},
-            {"text": "1980s", "isCorrect": false},
-            {"text": "1990s", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_4_5_E",
-          "corpus": "Pepsi-Cola originally marketed the drink as an aid for what physical condition?",
-          "options": [
-            {"text": "Insomnia", "isCorrect": false},
-            {"text": "Dyspepsia (Indigestion)", "isCorrect": true},
-            {"text": "Headaches", "isCorrect": false},
-            {"text": "Fatigue", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_4_6_E",
-          "corpus": "What was the first version of Pepsi that was sugar-free, introduced in 1964?",
-          "options": [
-            {"text": "Pepsi Max", "isCorrect": false},
-            {"text": "Diet Pepsi", "isCorrect": true},
-            {"text": "Pepsi Free", "isCorrect": false},
-            {"text": "Pepsi Zero Sugar", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_4_7_E",
-          "corpus": "The famous 1939 radio jingle for Pepsi-Cola promoted selling a 12-ounce bottle for what price?",
-          "options": [
-            {"text": "1 cent", "isCorrect": false},
-            {"text": "5 cents (a nickel)", "isCorrect": true},
-            {"text": "10 cents (a dime)", "isCorrect": false},
-            {"text": "25 cents (a quarter)", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_4_8_E",
-          "corpus": "The word 'Cola' was officially dropped from the Pepsi logo for a simplified look in which year?",
-          "options": [
-            {"text": "1940", "isCorrect": false},
-            {"text": "1962", "isCorrect": true},
-            {"text": "1973", "isCorrect": false},
-            {"text": "1998", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_4_9_E",
-          "corpus": "Who was the first celebrity to endorse Pepsi, back in 1909?",
-          "options": [
-            {"text": "Babe Ruth", "isCorrect": false},
-            {"text": "Marilyn Monroe", "isCorrect": false},
-            {"text": "Barney Oldfield (race car pioneer)", "isCorrect": true},
-            {"text": "Joan Crawford (actress)", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_4_10_E",
-          "corpus": "Pepsi was once sold in the Soviet Union via a unique barter deal involving what Russian product?",
-          "options": [
-            {"text": "Oil", "isCorrect": false},
-            {"text": "Vodka (Stolichnaya)", "isCorrect": true},
-            {"text": "Grain", "isCorrect": false},
-            {"text": "Lumber", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_4_11_M",
-          "corpus": "Caleb Bradham first registered a patent for his Pepsi-Cola recipe in which year?",
-          "options": [
-            {"text": "1898", "isCorrect": false},
-            {"text": "1903", "isCorrect": true},
-            {"text": "1919", "isCorrect": false},
-            {"text": "1931", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_4_12_M",
-          "corpus": "The Pepsi-Cola Company first went bankrupt in 1923 primarily due to speculation on the fluctuating price of what commodity?",
-          "options": [
-            {"text": "Gasoline", "isCorrect": false},
-            {"text": "Aluminum", "isCorrect": false},
-            {"text": "Sugar", "isCorrect": true},
-            {"text": "Cola Nuts", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_4_13_M",
-          "corpus": "Who was the president of Loft, Inc., a candy manufacturer, who bought the bankrupt Pepsi-Cola Company in 1931 and reformulated the recipe?",
-          "options": [
-            {"text": "Roy Megargel", "isCorrect": false},
-            {"text": "Donald Kendall", "isCorrect": false},
-            {"text": "Charles G. Guth", "isCorrect": true},
-            {"text": "Alfred Steele", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_4_14_M",
-          "corpus": "The 'Pepsi Number Fever' promotion in 1992 led to a major controversy and riots in which country?",
-          "options": [
-            {"text": "China", "isCorrect": false},
-            {"text": "The Philippines", "isCorrect": true},
-            {"text": "India", "isCorrect": false},
-            {"text": "Brazil", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_4_15_M",
-          "corpus": "The original formula for 'Brad's Drink' included sugar, water, caramel, lemon oil, nutmeg, and what other main ingredient?",
-          "options": [
-            {"text": "Cinnamon", "isCorrect": false},
-            {"text": "Ginger", "isCorrect": false},
-            {"text": "Kola Nuts", "isCorrect": true},
-            {"text": "Licorice Root", "isCorrect": false}
+            {"text": "Tropical", "isCorrect": false},
+            {"text": "Berry", "isCorrect": false},
+            {"text": "Gold Rush", "isCorrect": true},
+            {"text": "Citrus", "isCorrect": false}
           ]
         }
       ]
     },
     {
       "sectionId": "section_5",
-      "title": "Category: PepsiCo",
+      "title": "Category: Geography & Culture",
       "questions": [
         {
-          "questionId": "q_5_1_E",
-          "corpus": "In what year did the Pepsi-Cola Company merge with Frito-Lay, Inc. to officially form PepsiCo, Inc.?",
+          "questionId": "q_5_1",
+          "corpus": "Which region was Sting Energy first launched in?",
           "options": [
-            {"text": "1955", "isCorrect": false},
-            {"text": "1965", "isCorrect": true},
-            {"text": "1975", "isCorrect": false},
-            {"text": "1985", "isCorrect": false}
+            {"text": "North America", "isCorrect": false},
+            {"text": "Europe", "isCorrect": false},
+            {"text": "Asia Pacific", "isCorrect": true},
+            {"text": "South America", "isCorrect": false}
           ]
         },
         {
-          "questionId": "q_5_2_E",
-          "corpus": "Where are PepsiCo's corporate headquarters currently located?",
+          "questionId": "q_5_2",
+          "corpus": "What cultural aspect does Sting Energy emphasize in its branding?",
           "options": [
-            {"text": "Atlanta, Georgia", "isCorrect": false},
-            {"text": "Plano, Texas", "isCorrect": false},
-            {"text": "Purchase, New York", "isCorrect": true},
-            {"text": "New Bern, North Carolina", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_5_3_E",
-          "corpus": "Who was the CEO of PepsiCo from 2006 to 2018, known for her focus on 'Performance with Purpose'?",
-          "options": [
-            {"text": "Donald M. Kendall", "isCorrect": false},
-            {"text": "Indra Nooyi", "isCorrect": true},
-            {"text": "Ramon Laguarta", "isCorrect": false},
-            {"text": "D. Wayne Calloway", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_5_4_E",
-          "corpus": "PepsiCo's portfolio is generally classified into two main divisions: Beverages and what other category?",
-          "options": [
-            {"text": "Alcoholic Spirits", "isCorrect": false},
-            {"text": "Fast Food", "isCorrect": false},
-            {"text": "Convenient Foods/Snacks", "isCorrect": true},
-            {"text": "Personal Care", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_5_5_E",
-          "corpus": "Which of these former restaurant chains did PepsiCo once own, before spinning them off into Tricon Global Restaurants (now Yum! Brands)?",
-          "options": [
-            {"text": "McDonald's", "isCorrect": false},
-            {"text": "Subway", "isCorrect": false},
-            {"text": "Taco Bell", "isCorrect": true},
-            {"text": "Burger King", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_5_6_E",
-          "corpus": "In which decade did PepsiCo first move its headquarters to Purchase, New York?",
-          "options": [
-            {"text": "1950s", "isCorrect": false},
-            {"text": "1970s", "isCorrect": true},
-            {"text": "1980s", "isCorrect": false},
-            {"text": "1990s", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_5_7_E",
-          "corpus": "The merger between Pepsi-Cola and Frito-Lay was primarily driven by the opportunity to sell Frito-Lay snacks where?",
-          "options": [
-            {"text": "Only in the Western US", "isCorrect": false},
-            {"text": "Outside of the United States and Canada", "isCorrect": true},
-            {"text": "In vending machines only", "isCorrect": false},
-            {"text": "Directly to restaurants", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_5_8_E",
-          "corpus": "The current Chairman and CEO of PepsiCo is:",
-          "options": [
-            {"text": "Indra Nooyi", "isCorrect": false},
-            {"text": "Ramon Laguarta", "isCorrect": true},
-            {"text": "Donald M. Kendall", "isCorrect": false},
-            {"text": "Todd Jones", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_5_9_E",
-          "corpus": "PepsiCo products are consumed how many times a day by consumers around the world?",
-          "options": [
-            {"text": "1 million", "isCorrect": false},
-            {"text": "100 million", "isCorrect": false},
-            {"text": "More than 1 billion", "isCorrect": true},
-            {"text": "10 billion", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_5_10_E",
-          "corpus": "The famous 'Cola Wars' in the U.S. market is a long-standing rivalry between PepsiCo and which other company?",
-          "options": [
-            {"text": "Keurig Dr Pepper", "isCorrect": false},
-            {"text": "Nestlé", "isCorrect": false},
-            {"text": "The Coca-Cola Company", "isCorrect": true},
-            {"text": "Dr Pepper Snapple Group", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_5_11_M",
-          "corpus": "Which major acquisition in 2018 significantly expanded PepsiCo's presence in the at-home beverage market?",
-          "options": [
-            {"text": "Tropicana", "isCorrect": false},
-            {"text": "SodaStream", "isCorrect": true},
-            {"text": "Quaker Oats", "isCorrect": false},
-            {"text": "Naked Juice", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_5_12_M",
-          "corpus": "Who became the first CEO of the newly formed PepsiCo, Inc. after the 1965 merger?",
-          "options": [
-            {"text": "Herman Lay", "isCorrect": false},
-            {"text": "Charles G. Guth", "isCorrect": false},
-            {"text": "Donald M. Kendall", "isCorrect": true},
-            {"text": "Caleb Bradham", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_5_13_M",
-          "corpus": "In addition to Taco Bell, which other pizza chain was owned by PepsiCo before being spun off into Yum! Brands?",
-          "options": [
-            {"text": "Domino's", "isCorrect": false},
-            {"text": "Pizza Hut", "isCorrect": true},
-            {"text": "Little Caesars", "isCorrect": false},
-            {"text": "Papa John's", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_5_14_M",
-          "corpus": "PepsiCo's total net revenues for the year 2023 were reported to be over:",
-          "options": [
-            {"text": "$25 billion", "isCorrect": false},
-            {"text": "$50 billion", "isCorrect": false},
-            {"text": "$91 billion", "isCorrect": true},
-            {"text": "$150 billion", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_5_15_M",
-          "corpus": "PepsiCo divested its restaurant businesses in 1997, spinning them off into a new company that was initially named what?",
-          "options": [
-            {"text": "Global Restaurants, Inc.", "isCorrect": false},
-            {"text": "Tricon Global Restaurants, Inc.", "isCorrect": true},
-            {"text": "Allied Food Services", "isCorrect": false},
-            {"text": "Quick Service Brands", "isCorrect": false}
+            {"text": "Adventure", "isCorrect": false},
+            {"text": "Energy and Performance", "isCorrect": true},
+            {"text": "Relaxation", "isCorrect": false},
+            {"text": "Traditional Values", "isCorrect": false}
           ]
         }
       ]
     },
     {
       "sectionId": "section_6",
-      "title": "Category: PepsiCo Values",
+      "title": "Category: Innovation & Future",
       "questions": [
         {
-          "questionId": "q_6_1_E",
-          "corpus": "PepsiCo's core mission is to build a sustainable future that brings value to its people, communities, and what other key group?",
+          "questionId": "q_6_1",
+          "corpus": "What innovation trend is Sting Energy following in recent years?",
           "options": [
-            {"text": "Shareholders", "isCorrect": false},
-            {"text": "Customers", "isCorrect": true},
-            {"text": "The Government", "isCorrect": false},
-            {"text": "Competitors", "isCorrect": false}
+            {"text": "Sustainable packaging", "isCorrect": true},
+            {"text": "Artificial flavors", "isCorrect": false},
+            {"text": "Higher sugar content", "isCorrect": false},
+            {"text": "Smaller can sizes", "isCorrect": false}
           ]
         },
         {
-          "questionId": "q_6_2_E",
-          "corpus": "PepsiCo's vision is to be the Global Leader in Beverages and Convenient Foods by 'Winning with' which strategy?",
+          "questionId": "q_6_2",
+          "corpus": "Which aspect of Sting Energy focuses on environmental responsibility?",
           "options": [
-            {"text": "Global Expansion", "isCorrect": false},
-            {"text": "Digital Transformation", "isCorrect": false},
-            {"text": "PepsiCo Positive (pep+)", "isCorrect": true},
-            {"text": "Cost Leadership", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_6_3_E",
-          "corpus": "The three action-oriented elements of PepsiCo's culture to achieve its vision are 'Faster, Stronger, and' what?",
-          "options": [
-            {"text": "Cheaper", "isCorrect": false},
-            {"text": "Bigger", "isCorrect": false},
-            {"text": "Better", "isCorrect": true},
-            {"text": "Louder", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_6_4_E",
-          "corpus": "Which value emphasizes creating a workplace where everyone feels valued and respected?",
-          "options": [
-            {"text": "Efficiency", "isCorrect": false},
-            {"text": "Inclusion", "isCorrect": true},
-            {"text": "Adaptability", "isCorrect": false},
-            {"text": "Competitiveness", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_6_5_E",
-          "corpus": "Which core value is central to PepsiCo's commitment to continuous innovation to meet consumer needs?",
-          "options": [
-            {"text": "Brand Consistency", "isCorrect": false},
-            {"text": "Product Excellence", "isCorrect": true},
-            {"text": "Social Media Presence", "isCorrect": false},
-            {"text": "Market Saturation", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_6_6_E",
-          "corpus": "PepsiCo's mission statement is 'Create more smiles with every sip and every' what?",
-          "options": [
-            {"text": "Minute", "isCorrect": false},
-            {"text": "Dollar", "isCorrect": false},
-            {"text": "Bite", "isCorrect": true},
-            {"text": "Purchase", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_6_7_E",
-          "corpus": "The 'Better' element of the PepsiCo culture framework primarily focuses on the company's impact on the planet and what else?",
-          "options": [
-            {"text": "Shareholders", "isCorrect": false},
-            {"text": "Competitors", "isCorrect": false},
-            {"text": "Communities", "isCorrect": true},
-            {"text": "Governments", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_6_8_E",
-          "corpus": "What does the 'Stronger' pillar focus on transforming to make PepsiCo more unified and competitive?",
-          "options": [
-            {"text": "Advertising Slogans", "isCorrect": false},
-            {"text": "Product Ingredients", "isCorrect": false},
-            {"text": "Capabilities and Costs", "isCorrect": true},
-            {"text": "The Board of Directors", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_6_9_E",
-          "corpus": "The 'Faster' element of the PepsiCo culture primarily aims to win in the marketplace by being more focused on whom?",
-          "options": [
-            {"text": "Shareholders", "isCorrect": false},
-            {"text": "Logistics Partners", "isCorrect": false},
-            {"text": "Consumers", "isCorrect": true},
-            {"text": "Technology Firms", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_6_10_E",
-          "corpus": "The commitment to 'Act with Integrity' is about doing the right thing, even when it is:",
-          "options": [
-            {"text": "Expensive", "isCorrect": false},
-            {"text": "Difficult", "isCorrect": true},
-            {"text": "Popular", "isCorrect": false},
-            {"text": "Inefficient", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_6_11_M",
-          "corpus": "The company's commitment to 'delivering sustainable top-tier total shareholder return' is a primary focus for which group mentioned in its mission?",
-          "options": [
-            {"text": "Customers", "isCorrect": false},
-            {"text": "Associates", "isCorrect": false},
-            {"text": "Shareholders", "isCorrect": true},
-            {"text": "Consumers", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_6_12_M",
-          "corpus": "The 'Better' pillar integrates a sense of purpose into the business strategy, emphasizing the importance of operating within what boundaries?",
-          "options": [
-            {"text": "Geographic Boundaries", "isCorrect": false},
-            {"text": "Financial Boundaries", "isCorrect": false},
-            {"text": "Regulatory Boundaries", "isCorrect": false},
-            {"text": "Planetary Boundaries", "isCorrect": true}
-          ]
-        },
-        {
-          "questionId": "q_6_13_M",
-          "corpus": "PepsiCo's vision of 'To grow for good' signifies its commitment to expanding its business while promoting what kind of practices?",
-          "options": [
-            {"text": "Aggressive Marketing", "isCorrect": false},
-            {"text": "Sustainable Practices", "isCorrect": true},
-            {"text": "Rapid Diversification", "isCorrect": false},
-            {"text": "Acquisition-Only Growth", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_6_14_M",
-          "corpus": "PepsiCo believes its business success depends on providing a fair return to investors while adhering to the highest standards of:",
-          "options": [
-            {"text": "Sales Volume", "isCorrect": false},
-            {"text": "Market Share", "isCorrect": false},
-            {"text": "Integrity", "isCorrect": true},
-            {"text": "Product Variety", "isCorrect": false}
-          ]
-        },
-        {
-          "questionId": "q_6_15_M",
-          "corpus": "The 'Faster' pillar includes accelerating international expansion and focusing on which type of markets?",
-          "options": [
-            {"text": "Emerging Markets", "isCorrect": false},
-            {"text": "Right to Win Markets", "isCorrect": true},
-            {"text": "Monopoly Markets", "isCorrect": false},
-            {"text": "Established Markets", "isCorrect": false}
+            {"text": "Recyclable cans", "isCorrect": false},
+            {"text": "Reduced carbon footprint", "isCorrect": false},
+            {"text": "Sustainable sourcing", "isCorrect": false},
+            {"text": "All of the above", "isCorrect": true}
           ]
         }
       ]
