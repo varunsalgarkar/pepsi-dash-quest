@@ -28,7 +28,10 @@ export const GameQuestion = ({ question, onAnswer, onRestart, currentScore, tota
 
   // Reset state when question changes
   useEffect(() => {
-    setShowGif(true);
+    // setShowGif(true);
+    setShowGif(currentQuestionIndex === 0)
+
+
     setSelectedAnswer(null);
     setAnswered(false);
     setCountdown(5);

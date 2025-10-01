@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Trophy, Zap, Target, Settings, X } from "lucide-react";
 
+
 interface GameStartProps {
   onStart: (sectionId?: string) => void;
   questionsCount: number;
