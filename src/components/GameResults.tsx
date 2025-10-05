@@ -64,10 +64,10 @@ export const GameResults = ({ score, totalQuestions, onRestart }: GameResultsPro
         <div className="mb-8 p-6 rounded-2xl sting-gradient text-sting-black glass-card">
           <TrendingUp className="w-12 h-12 mx-auto mb-4" />
           <div className="text-3xl font-bold mb-2">
-            ${score}M Revenue Generated
+            {score} Correct Questions
           </div>
           <div className="text-lg opacity-90">
-            Out of ${totalQuestions}M possible
+            Out of {totalQuestions} possible
           </div>
           <div className="mt-4 w-full bg-sting-black/20 rounded-full h-3">
             <div 
@@ -125,7 +125,7 @@ export const GameResults = ({ score, totalQuestions, onRestart }: GameResultsPro
         <div className="mt-6 text-sm text-sting-white/60">
           <p>⚡ Great job powering through the energy challenge!</p>
           {percentage < 100 && (
-            <p className="mt-1 text-sting-gold">Try again to maximize your Sting revenue! 💪</p>
+            <p className="mt-1 text-sting-gold">Try again and maximize with your Sting Power! 💪</p>
           )}
         </div>
         </div>

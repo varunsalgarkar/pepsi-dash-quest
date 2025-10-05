@@ -28,13 +28,12 @@ export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange, que
   };
 
   const sections = [
-    { id: "section_1", title: "Women Empowerment", color: "#ff6b6b" },
-    { id: "section_2", title: "Safe Water & Wash", color: "#4ecdc4" },
-    { id: "section_3", title: "Food for Good", color: "#45b7d1" },
-    { id: "section_4", title: "Blood Donation", color: "#96ceb4" },
-    { id: "section_5", title: "Pep+", color: "#feca57" },
-    { id: "section_6", title: "Partners -Nirmaan , Akshaypatra, SWN", color: "#ff9ff3" },
-    { id: "section_7", title: "Green Team", color: "#f71156ff" }    
+    { id: "section_1", title: "Blood Donation", color: "#ff6b6b" },
+    { id: "section_2", title: "PepsiCo Partners", color: "#4ecdc4" },
+    { id: "section_3", title: "Safe Water & Wash", color: "#45b7d1" },
+    { id: "section_4", title: "Food for Good", color: "#96ceb4" },
+    { id: "section_5", title: "Women Empowerment", color: "#feca57" },
+    { id: "section_6", title: "Pep Positive", color: "#ff9ff3" }    
   ];
 
   const rollDice = () => {
@@ -66,11 +65,11 @@ export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange, que
               CSR ENERGY QUIZ
             </h1>
             <p className="text-xl text-sting-gold mb-2">
-              Test your energy knowledge and maximize revenue!
+              Test your energy knowledge and win big!
             </p>
             <div className="flex items-center justify-center gap-2 text-electric-cyan">
               <Target className="w-5 h-5" />
-              <span className="text-sm font-medium">Every correct answer = +$1M Revenue</span>
+              <span className="text-sm font-medium">Every correct answer = +1 Step Closer to the Prize</span>
             </div>
           </div>
 
@@ -104,7 +103,7 @@ export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange, que
             >
               <Target className="w-8 h-8 text-correct mx-auto mb-2" />
               <h3 className="font-semibold text-correct">Goal</h3>
-              <p className="text-sm text-sting-white/70">Maximize Sting revenue</p>
+              <p className="text-sm text-sting-white/70">Win Big!</p>
             </div>
           </div>
 
@@ -117,7 +116,7 @@ export const GameStart = ({ onStart, questionsCount, onQuestionsCountChange, que
           </Button>
           
           <div className="mt-6 text-sm text-sting-white/60">
-            <p>⚡ {questionsCount} questions • ⏱️ {questionTime}s per question • 💰 Revenue tracking</p>
+            <p>⚡ {questionsCount} questions • ⏱️ {questionTime}s per question • 💰 Answer all and win Prize</p>
           </div>
         </div>
       </div>
