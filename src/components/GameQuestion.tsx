@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { CheckCircle, XCircle, Clock, RotateCcw } from "lucide-react";
+import { CircleCheck as CheckCircle, Circle as XCircle, Clock, RotateCcw } from "lucide-react";
 
 interface Question {
   questionId: string;
