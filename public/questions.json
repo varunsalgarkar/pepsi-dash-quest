@@ -1729,89 +1729,269 @@
       ]
     },
     {
-      "questionId": "q_3_26_E",
-      "corpus": "How long should you wash your hands to ensure they are properly cleaned?",
-      "options": [
-        {"text": "20 Seconds", "isCorrect": true}
-      ]
-    },
-    {
-      "questionId": "q_3_27_E",
-      "corpus": "How long should you wash your hands to ensure they are properly cleaned?",
-      "options": [
-        {"text": "20 Seconds", "isCorrect": true}
-      ]
-    },
-    {
-      "questionId": "q_3_28_E",
-      "corpus": "What is the recommended minimum amount of water an adult person should drink daily?",
-      "options": [
-        {"text": "2 Litres", "isCorrect": true}
-      ]
-    },
-    {
-      "questionId": "q_3_29_E",
-      "corpus": "What is the most common symptom of waterborne disease?",
-      "options": [
-        {"text": "Diarrhea", "isCorrect": true}
-      ]
-    },
-    {
-      "questionId": "q_3_30_E",
-      "corpus": "How much water is there on earth’s surface?",
-      "options": [
-        {"text": "71%", "isCorrect": true}
-      ]
-    },
-    {
-      "questionId": "q_3_31_E",
-      "corpus": "Out of total water on earth, how many percent is the fresh water?",
-      "options": [
-        {"text": "3%", "isCorrect": true}
-      ]
-    },
-    {
-      "questionId": "q_3_32_E",
-      "corpus": "Out of total fresh water on earth, how much water is accessible for drinking?",
-      "options": [
-        {"text": "0.5%", "isCorrect": true}
-      ]
-    },
-    {
-      "questionId": "q_3_33_E",
-      "corpus": "How many people on earth do not have access to safely managed drinking water services?",
-      "options": [
-        {"text": "2.2 billion", "isCorrect": true}
-      ]
-    },
-    {
-      "questionId": "q_3_34_E",
-      "corpus": "Which industry consumes the highest amount of fresh water?",
-      "options": [
-        {"text": "Agriculture", "isCorrect": true}
-      ]
-    },
-    {
-      "questionId": "q_3_35_E",
-      "corpus": "What is grey water?",
-      "options": [
-        {"text": "Waste water generated from houses from dishwashing, kitchen etc.", "isCorrect": true}
-      ]
-    },
-    {
-      "questionId": "q_3_36_E",
-      "corpus": "What is black water?",
-      "options": [
-        {"text": "Waste water generated from toilets that contains faecal matter and urine", "isCorrect": true}
-      ]
-    },
-    {
-      "questionId": "q_3_37_E",
-      "corpus": "How much water is used in creating a pair of jeans?",
-      "options": [
-        {"text": "7,600 litres", "isCorrect": true}
-      ]
-    },
+          "questionId": "q_3_26_E",
+          "corpus": "How long should you wash your hands to ensure they are properly cleaned?",
+          "options": [
+            {
+              "text": "10 Seconds",
+              "isCorrect": false
+            },
+            {
+              "text": "20 Seconds",
+              "isCorrect": true
+            },
+            {
+              "text": "30 Seconds",
+              "isCorrect": false
+            },
+            {
+              "text": "60 Seconds",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "questionId": "q_3_27_E",
+          "corpus": "How long should you wash your hands to ensure they are properly cleaned?",
+          "options": [
+            {
+              "text": "10 Seconds",
+              "isCorrect": false
+            },
+            {
+              "text": "20 Seconds",
+              "isCorrect": true
+            },
+            {
+              "text": "30 Seconds",
+              "isCorrect": false
+            },
+            {
+              "text": "60 Seconds",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "questionId": "q_3_28_E",
+          "corpus": "What is the recommended minimum amount of water an adult person should drink daily?",
+          "options": [
+            {
+              "text": "1 Litre",
+              "isCorrect": false
+            },
+            {
+              "text": "2 Litres",
+              "isCorrect": true
+            },
+            {
+              "text": "3 Litres",
+              "isCorrect": false
+            },
+            {
+              "text": "5 Litres",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "questionId": "q_3_29_E",
+          "corpus": "What is the most common symptom of waterborne disease?",
+          "options": [
+            {
+              "text": "Fever",
+              "isCorrect": false
+            },
+            {
+              "text": "Headache",
+              "isCorrect": false
+            },
+            {
+              "text": "Cough",
+              "isCorrect": false
+            },
+            {
+              "text": "Diarrhea",
+              "isCorrect": true
+            }
+          ]
+        },
+        {
+          "questionId": "q_3_30_E",
+          "corpus": "How much water is there on earth’s surface?",
+          "options": [
+            {
+              "text": "50%",
+              "isCorrect": false
+            },
+            {
+              "text": "71%",
+              "isCorrect": true
+            },
+            {
+              "text": "80%",
+              "isCorrect": false
+            },
+            {
+              "text": "90%",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "questionId": "q_3_31_E",
+          "corpus": "Out of total water on earth, how many percent is the fresh water?",
+          "options": [
+            {
+              "text": "1%",
+              "isCorrect": false
+            },
+            {
+              "text": "3%",
+              "isCorrect": true
+            },
+            {
+              "text": "5%",
+              "isCorrect": false
+            },
+            {
+              "text": "10%",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "questionId": "q_3_32_E",
+          "corpus": "Out of total fresh water on earth, how much water is accessible for drinking?",
+          "options": [
+            {
+              "text": "0.5%",
+              "isCorrect": true
+            },
+            {
+              "text": "1%",
+              "isCorrect": false
+            },
+            {
+              "text": "5%",
+              "isCorrect": false
+            },
+            {
+              "text": "10%",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "questionId": "q_3_33_E",
+          "corpus": "How many people on earth do not have access to safely managed drinking water services?",
+          "options": [
+            {
+              "text": "1 billion",
+              "isCorrect": false
+            },
+            {
+              "text": "2.2 billion",
+              "isCorrect": true
+            },
+            {
+              "text": "3 billion",
+              "isCorrect": false
+            },
+            {
+              "text": "500 million",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "questionId": "q_3_34_E",
+          "corpus": "Which industry consumes the highest amount of fresh water?",
+          "options": [
+            {
+              "text": "Industry",
+              "isCorrect": false
+            },
+            {
+              "text": "Agriculture",
+              "isCorrect": true
+            },
+            {
+              "text": "Domestic use",
+              "isCorrect": false
+            },
+            {
+              "text": "Manufacturing",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "questionId": "q_3_35_E",
+          "corpus": "What is grey water?",
+          "options": [
+            {
+              "text": "Wastewater from toilets",
+              "isCorrect": false
+            },
+            {
+              "text": "Waste water generated from houses from dishwashing, kitchen etc.",
+              "isCorrect": true
+            },
+            {
+              "text": "Industrial wastewater from factories",
+              "isCorrect": false
+            },
+            {
+              "text": "Stormwater runoff",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "questionId": "q_3_36_E",
+          "corpus": "What is black water?",
+          "options": [
+            {
+              "text": "Waste water generated from toilets that contains faecal matter and urine",
+              "isCorrect": true
+            },
+            {
+              "text": "Wastewater from showers",
+              "isCorrect": false
+            },
+            {
+              "text": "Wastewater from washing machines",
+              "isCorrect": false
+            },
+            {
+              "text": "Kitchen sink water without fecal matter",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "questionId": "q_3_37_E",
+          "corpus": "How much water is used in creating a pair of jeans?",
+          "options": [
+            {
+              "text": "500 litres",
+              "isCorrect": false
+            },
+            {
+              "text": "1,000 litres",
+              "isCorrect": false
+            },
+            {
+              "text": "7,600 litres",
+              "isCorrect": true
+            },
+            {
+              "text": "10,000 litres",
+              "isCorrect": false
+            }
+          ]
+        },
     {
       "questionId": "q_3_38_E",
       "corpus": "What does “safely managed drinking water” mean according to WHO/UNICEF?",
