@@ -263,10 +263,19 @@
     word-wrap: break-word;
     word-break: break-word;
     overflow-wrap: break-word;
+    hyphens: auto;
   }
   
-  .hyphens-auto {
-    hyphens: auto;
+  .word-wrap {
+    word-wrap: break-word;
+  }
+  
+  .overflow-wrap-anywhere {
+    overflow-wrap: anywhere;
+  }
+  
+  .whitespace-normal {
+    white-space: normal;
   }
 
   /* Game Component Styles */
