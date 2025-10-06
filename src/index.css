@@ -258,6 +258,26 @@
     box-shadow: 0 0 20px hsl(var(--sting-gold) / 0.3);
   }
 
+  /* Text wrapping utilities */
+  .break-words {
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  .word-wrap {
+    word-wrap: break-word;
+  }
+  
+  .overflow-wrap-anywhere {
+    overflow-wrap: anywhere;
+  }
+  
+  .whitespace-normal {
+    white-space: normal;
+  }
+
   /* Game Component Styles */
   .game-card {
     @apply glass-card p-6 transition-[var(--transition-smooth)];
