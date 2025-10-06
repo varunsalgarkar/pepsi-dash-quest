@@ -116,7 +116,7 @@ export const GameResults = ({ score, totalQuestions, onRestart }: GameResultsPro
             variant="outline"
             size="lg"
             className="glass-button border-sting-gold text-sting-gold hover:bg-sting-gold/10 flex-1"
-            onClick={() => window.location.reload()}
+            onClick={() => window.location.href = 'http://localhost:5173/'}
           >
             🏠 Home
           </Button>

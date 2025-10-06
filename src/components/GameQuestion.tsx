@@ -171,7 +171,8 @@ export const GameQuestion = ({ question, onAnswer, onRestart, currentScore, tota
                 <Button
                   key={index}
                   variant="outline"
-                  className={buttonClass}
+                  // className={buttonClass}
+                  className={`${buttonClass} whitespace-normal`}
                   onClick={() => handleAnswer(index)}
                   disabled={answered}
                 >
