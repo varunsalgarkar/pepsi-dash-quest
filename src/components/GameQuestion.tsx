@@ -176,20 +176,20 @@ export const GameQuestion = ({ question, onAnswer, onRestart, currentScore, tota
                   onClick={() => handleAnswer(index)}
                   disabled={answered}
                 >
-                  <div className="flex items-center gap-2 sm:gap-3 w-full">
+                  <div className="flex items-start gap-2 sm:gap-3 w-full">
                     <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full bg-sting-gold/20 flex items-center justify-center font-bold text-sting-gold text-xs sm:text-sm md:text-base">
                       {String.fromCharCode(65 + index)}
                     </div>
-                    <span className="flex-1 text-left">{option.text}</span>
+                    <span className="flex-1 text-left break-words hyphens-auto leading-relaxed">{option.text}</span>
                     {showResult && isSelected && (
                       isCorrect ? (
-                        <CheckCircle className="w-5 h-5 text-correct" />
+                        <CheckCircle className="w-5 h-5 text-correct flex-shrink-0" />
                       ) : (
-                        <XCircle className="w-5 h-5 text-incorrect" />
+                        <XCircle className="w-5 h-5 text-incorrect flex-shrink-0" />
                       )
                     )}
                     {showResult && !isSelected && isCorrect && (
-                      <CheckCircle className="w-5 h-5 text-correct" />
+                      <CheckCircle className="w-5 h-5 text-correct flex-shrink-0" />
                     )}
                   </div>
                 </Button>
